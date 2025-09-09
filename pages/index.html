@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О компании</title>
+
+    <!-- Подключаем шрифт Geologica от Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap">
+
+    <!-- Подключаем Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ assets_url() }}/css/sliderStyles.css">
+    <link rel="stylesheet" href="../style/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        customGray: '#1a1a1a',
+                        lightGray: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Geologica', 'ui-sans-serif', 'system-ui', 'sans-serif']
+                    },
+                    screens: {
+                        'md': '1280px',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+
+
+    </style>
+</head>
+
+<body class="font-sans  text-[#01101B]">
+    <header
+        class="container mx-auto md:px-[40px] md:py-[28px] my-6 rounded-xl bg-white  flex items-center justify-between md:shadow-[0px_20px_50px_rgba(0,0,0,0.1)]">
+        <div class="flex items-center gap-[42px]">
+            <!-- Логотип -->
+            <a href="./index.html" class="text-primary">
+                <img src="../assets/Logo Независимость(2) 2.svg" alt="">
+            </a>
+
+            <!-- Навигация -->
+            <nav class="hidden md:flex space-x-[32px] text-sm font-medium">
+                <a href="./index.html" class="text-[#1C1C1C]">Главная</a>
+                <a href="" class="text-[#1C1C1C]">Автокредит</a>
+                <a href="" class="text-[#1C1C1C]">Trade-in</a>
+                <a href="" class="text-[#1C1C1C]">Акции</a>
+                <a href="" class="text-[#1C1C1C]">Лизинг</a>
+                <a href="" class="text-[#1C1C1C]">Выкуп</a>
+                <a href="" class="text-[#1C1C1C]">Авто под такси</a>
+                <a href="" class="text-[#1C1C1C]">Директ</a>
+                <a href="" class="text-[#1C1C1C]">Контакты</a>
+            </nav>
+        </div>
+
+        <div class="flex md:hidden space-x-[16px]">
+            <img src="../assets/mobile/Телефон.svg" alt="телефон">
+            <img src="../assets/mobile/burger.svg" alt="бургер">
+        </div>
+
+        <button class="hidden md:block px-[24px] py-[16px]  font-regular text-[#000F6E] bg-[#56E0EA] rounded-[16px]">
+            Обратная связь
+        </button>
+    </header>
+
+    <main class="container mx-auto mt-10">
+        <section class="py-8 px-4 max-w-7xl mx-auto">
+            <!-- Заголовок -->
+            <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
+                Умный способ купить автомобиль
+            </h1>
+
+            <!-- Слайдер -->
+            <div class="relative w-full h-[542px] rounded-[40px] overflow-hidden bg-white shadow-xl">
+                <!-- Контейнер слайдов -->
+                <div class="slider-container absolute inset-0 flex transition-transform duration-500 ease-in-out"
+                    id="slider">
+                    <!-- Слайд 1 -->
+                    <div class="w-full flex-shrink-0 relative"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&h=542&q=80') center/cover no-repeat;">
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h2 class="text-2xl md:text-3xl font-bold mb-2">Лучшая выгода
+                                от SOUEAST —не пропусти!</h2>
+                            <p class="text-lg opacity-90">от 2 499 000 ₽</p>
+                            <button
+                                class="mt-3 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full shadow-md transition">
+                                Купить в кредит от 3 333 ₽/мес
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 2 -->
+                    <div class="w-full flex-shrink-0 relative"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1541894345334-3eac78d9c7b0?auto=format&fit=crop&w=1200&h=542&q=80') center/cover no-repeat;">
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h2 class="text-2xl md:text-3xl font-bold mb-2">SOUEAST X5</h2>
+                            <p class="text-lg opacity-90">от 1 999 000 ₽</p>
+                            <button
+                                class="mt-3 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full shadow-md transition">
+                                Купить в кредит от 2 777 ₽/мес
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 3 -->
+                    <div class="w-full flex-shrink-0 relative"
+                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&h=542&q=80') center/cover no-repeat;">
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h2 class="text-2xl md:text-3xl font-bold mb-2">SOUEAST T7</h2>
+                            <p class="text-lg opacity-90">от 1 799 000 ₽</p>
+                            <button
+                                class="mt-3 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full shadow-md transition">
+                                Купить в кредит от 2 333 ₽/мес
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+<div class="absolute top-3 right-3 space-x-[28px] flex items-center justify-around bg-white bg-opacity-95 backdrop-blur-sm rounded-full p-4 shadow-md w-[730px] text-center">
+  <div class="flex flex-col font-medium text-left mr-6 text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">
+    <span>Срок действия</span>
+    <span>спецпредложения:</span>
+  </div>
+
+  <div class="flex items-center space-x-3">
+    <div class="flex flex-col items-center">
+      <span id="days" class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">04</span>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] mt-1">Дня</span>
+    </div>
+
+    <span class="text-[#1A77B7] text-xl">:</span>
+
+    <div class="flex flex-col items-center">
+      <span id="hours" class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">11</span>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] mt-1">Часов</span>
+    </div>
+
+    <span class="text-[#1A77B7] text-xl">:</span>
+
+    <div class="flex flex-col items-center">
+      <span id="minutes" class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">40</span>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] mt-1">Минут</span>
+    </div>
+
+    <span class="text-[#1A77B7] text-xl">:</span>
+
+    <div class="flex flex-col items-center">
+      <span id="seconds" class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">59</span>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] mt-1">Секунд</span>
+    </div>
+  </div>
+</div>
+
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <div class="w-3 h-3 bg-white bg-opacity-50 rounded-full"></div>
+                    <div class="w-3 h-3 bg-white bg-opacity-80 rounded-full"></div>
+                    <div class="w-3 h-3 bg-white rounded-full"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="../script/components/slider/bannersSlider.js"></script>
+</body>
+
+</html>
