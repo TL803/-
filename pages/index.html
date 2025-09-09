@@ -42,14 +42,12 @@
 
 <body class="font-sans  text-[#01101B]">
     <header
-        class="container mx-auto md:px-[40px] md:py-[28px] my-6 rounded-xl bg-white  flex items-center justify-between md:shadow-[0px_20px_50px_rgba(0,0,0,0.1)]">
+        class="container mx-auto md:px-[40px] px-4 md:py-[28px] my-6 rounded-xl bg-white  flex items-center justify-between md:shadow-[0px_20px_50px_rgba(0,0,0,0.1)]">
         <div class="flex items-center gap-[42px]">
-            <!-- Логотип -->
             <a href="./index.html" class="text-primary">
                 <img src="../assets/Logo Независимость(2) 2.svg" alt="">
             </a>
 
-            <!-- Навигация -->
             <nav class="hidden md:flex space-x-[32px] text-sm font-medium">
                 <a href="./index.html" class="text-[#1C1C1C]">Главная</a>
                 <a href="" class="text-[#1C1C1C]">Автокредит</a>
@@ -73,20 +71,16 @@
         </button>
     </header>
 
-    <main class="container mx-auto mt-10">
+    <main class="container mx-auto mt-10 px-4  ">
         <section class="mx-auto">
-            <!-- Заголовок -->
             <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
                 Умный способ купить автомобиль
             </h1>
 
-            <!-- Слайдер -->
             <div
                 class="relative w-full h-[291px] select-none md:h-[542px] p-2 md:p-4 rounded-[20px] md:rounded-[40px] overflow-hidden bg-white shadow-xl">
-                <!-- Контейнер слайдов -->
                 <div class="slider-container absolute inset-0 flex transition-transform duration-500 ease-in-out"
                     id="slider">
-                    <!-- Слайд 1 -->
                     <div class="w-full flex-shrink-0 relative"
                         style="background: url('../assets/banners/Баннер\ 1.png') center/cover no-repeat;">
                         <div class="absolute bottom-8 left-6 text-white">
@@ -101,7 +95,6 @@
                         </div>
                     </div>
 
-                    <!-- Слайд 2 -->
                     <div class="w-full flex-shrink-0 relative"
                         style="background:  url('../assets/banners/Rectangle 99.png') center/cover no-repeat;">
                         <div
@@ -118,7 +111,6 @@
                         </div>
                     </div>
 
-                    <!-- Слайд 3 -->
                     <div class="w-full flex-shrink-0 relative"
                         style="background:  url('../assets/banners/Rectangle 99 (1).png') center/cover no-repeat;">
                         <div
@@ -239,11 +231,18 @@
                 </div>
             </div>
         </section>
+
+        <section class="mt-[50px]">
+            <div class="flex flex-row flex-wrap gap-[15px]" id="marks-container">
+
+            </div>
+        </section>
     </main>
 
 
     <script src="../script/components/slider/bannersSlider.js"></script>
     <script src="../script/components/timer/timer.js"></script>
+    <script src="../script/components/iterations/marks.js"></script>
 </body>
 
 </html>
