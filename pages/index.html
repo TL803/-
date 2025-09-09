@@ -12,7 +12,6 @@
 
     <!-- Подключаем Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{ assets_url() }}/css/sliderStyles.css">
     <link rel="stylesheet" href="../style/style.css">
 
     <script>
@@ -65,7 +64,7 @@
         </div>
 
         <div class="flex md:hidden space-x-[16px]">
-            <img src="../assets/mobile/Телефон.svg" alt="телефон">
+            <a href="tel:+79999999999"><img src="../assets/mobile/Телефон.svg" alt="телефон"></a>
             <img src="../assets/mobile/burger.svg" alt="бургер">
         </div>
 
@@ -75,26 +74,28 @@
     </header>
 
     <main class="container mx-auto mt-10">
-        <section class="py-8 px-4 max-w-7xl mx-auto">
+        <section class="mx-auto">
             <!-- Заголовок -->
             <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
                 Умный способ купить автомобиль
             </h1>
 
             <!-- Слайдер -->
-            <div class="relative w-full h-[542px] rounded-[40px] overflow-hidden bg-white shadow-xl">
+            <div
+                class="relative w-full h-[291px] select-none md:h-[542px] p-2 md:p-4 rounded-[20px] md:rounded-[40px] overflow-hidden bg-white shadow-xl">
                 <!-- Контейнер слайдов -->
                 <div class="slider-container absolute inset-0 flex transition-transform duration-500 ease-in-out"
                     id="slider">
                     <!-- Слайд 1 -->
                     <div class="w-full flex-shrink-0 relative"
-                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&h=542&q=80') center/cover no-repeat;">
-                        <div class="absolute bottom-6 left-6 text-white">
-                            <h2 class="text-2xl md:text-3xl font-bold mb-2">Лучшая выгода
+                        style="background: url('../assets/banners/Баннер\ 1.png') center/cover no-repeat;">
+                        <div class="absolute bottom-8 left-6 text-white">
+                            <h2
+                                class="text-[14px]  md:text-[40px] font-semibold md:font-medium mb-2 leading-[18px] md:leading-[44px]">
+                                Лучшая выгода<br>
                                 от SOUEAST —не пропусти!</h2>
-                            <p class="text-lg opacity-90">от 2 499 000 ₽</p>
                             <button
-                                class="mt-3 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full shadow-md transition">
+                                class="mt-3 select-none bg-gradient-to-r from-[#000F6E] to-[#56E0EA] md:text-[20px] text-[11px] text-white font-regular md:font-medium px-[13px] py-[8px] md:py-[20px] md:px-[28px] rounded-[20px] shadow-md transition duration-300 hover:from-[#00117A] hover:to-[#4CD6F5] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#56E0EA]">
                                 Купить в кредит от 3 333 ₽/мес
                             </button>
                         </div>
@@ -102,65 +103,134 @@
 
                     <!-- Слайд 2 -->
                     <div class="w-full flex-shrink-0 relative"
-                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1541894345334-3eac78d9c7b0?auto=format&fit=crop&w=1200&h=542&q=80') center/cover no-repeat;">
-                        <div class="absolute bottom-6 left-6 text-white">
-                            <h2 class="text-2xl md:text-3xl font-bold mb-2">SOUEAST X5</h2>
-                            <p class="text-lg opacity-90">от 1 999 000 ₽</p>
+                        style="background:  url('../assets/banners/Rectangle 99.png') center/cover no-repeat;">
+                        <div
+                            class="absolute bottom-[20px] md:bottom-[108px] space-y-[12px] md:space-y-[24px] left-6 text-white">
+                            <p class="text-[12px] md:text-[24px] font-semibold md:font-bold">BAIC X55</p>
+                            <h2 class="text-[16px] md:text-[40px] font-medium mb-2 leading-[18px] md:leading-[44px]">
+                                Согреем осень скидками!</h2>
+                            <p class="text-[13px] md:text-[24px] font-regular md:font-medium">Горячие предложения на
+                                автомобили, кредит<br> от 0,01% и выгода до 500 000 ₽</p>
                             <button
-                                class="mt-3 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full shadow-md transition">
-                                Купить в кредит от 2 777 ₽/мес
+                                class="mt-3 bg-[#01298B] md:text-[20px] text-[11px] text-white font-regular md:font-medium px-[13px] py-[8px] md:py-[20px] md:px-[28px] rounded-[20px] shadow-md transition duration-300 hover:from-[#00117A] hover:to-[#4CD6F5] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#56E0EA]">
+                                Получить выгоду
                             </button>
                         </div>
                     </div>
 
                     <!-- Слайд 3 -->
                     <div class="w-full flex-shrink-0 relative"
-                        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&h=542&q=80') center/cover no-repeat;">
-                        <div class="absolute bottom-6 left-6 text-white">
-                            <h2 class="text-2xl md:text-3xl font-bold mb-2">SOUEAST T7</h2>
-                            <p class="text-lg opacity-90">от 1 799 000 ₽</p>
+                        style="background:  url('../assets/banners/Rectangle 99 (1).png') center/cover no-repeat;">
+                        <div
+                            class="absolute bottom-[40px] md:bottom-[114px] left-6 space-y-[12px] md:space-y-[28px] text-white">
+                            <h2
+                                class="text-[16px] md:text-[36px] font-semibold md:font-medium mb-2 leading-[18px] md:leading-[28px]">
+                                Меняй старое на новое — <br class="md:hidden">с выгодой!</h2>
+                            <p class="text-[13px] md:text-[24px]">Обменяй свой автомобиль по системе<br
+                                    class="md:block hidden"> TRADE-IN и получи до 200 000 ₽</p>
+                            <p class="text-[16px] font-regular md:block hidden">Выбирай свежую модель уже сегодня!</p>
                             <button
-                                class="mt-3 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full shadow-md transition">
-                                Купить в кредит от 2 333 ₽/мес
+                                class="mt-3 bg-[#C21E1E] md:text-[20px] text-[11px] text-white font-regular md:font-medium px-[13px] py-[8px] md:py-[20px] md:px-[28px] rounded-[20px] shadow-md transition duration-300 hover:from-[#00117A] hover:to-[#4CD6F5] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#56E0EA]">
+                                Обменять в Тrade-in
                             </button>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="w-full flex-shrink-0 relative"
+                        style="background:  url('../assets/banners/KAIYI\ X3\ Pro.png') center/cover no-repeat;">
+                        <div class="absolute bottom-[76px] space-y-[12px] md:space-y-[24px] left-6 text-white">
+                            <h2
+                                class="text-[14px] md:text-[40px] font-semibold md:font-medium mb-2 leading-[18px] md:leading-[44px]">
+                                KAIYI X3 Pro</h2>
+                            <p class="md:text-[16px] text-[12px]">KAIYI X3 Pro — мощь в компактном <br class="md:block hidden">
+                                корпусе!Современный дизайн, передовые<br class="md:block hidden"> технологии и максимум комфорта.</p>
+                            <button
+                                class="mt-3 bg-white md:text-[20px] text-[11px] text-[#01298B] font-regular md:font-medium px-[13px] py-[8px] md:py-[20px] md:px-[28px] rounded-[20px] shadow-md transition duration-300 hover:from-[#00117A] hover:to-[#4CD6F5] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#56E0EA]">
+                                Воспользоваться скидкой
+                            </button>
+                        </div>
+                        <div
+                            class='w-[203px] px-3 h-[36px] absolute bottom-[12px] space-x-[8px] right-[12px] md:bottom-[40px] md:right-[40px] md:w-[157px] md:h-[190px] flex items-center md:flex-col text-center text-white justify-center rounded-[12px] bg-[#C91E1E]'>
+                            <img class="w-[24px] md:w-auto" src="../assets/banners/Gift.svg" alt="Gift">
+                            <p class="text-[10px] md:text-[16px]">Доп оборудование<br class="md:block hidden">
+                                в подарок<br class="md:block hidden">
+                                на 100.000 руб!
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="w-full flex-shrink-0 relative"
+                        style="background:  url('../assets/banners/LIVAN\ S6PRO.png') center/cover no-repeat;">
+                        <div class="absolute bottom-[76px] space-y-[12px] md:space-y-[24px] left-6 text-white">
+                            <h2
+                                class="text-[14px] md:text-[40px] font-semibold md:font-medium mb-2 leading-[18px] md:leading-[44px]">
+                                LIVAN S6PRO</h2>
+                            <p class="md:text-[16px] text-[12px]">Мощь и стиль в каждом движении! <br class="md:block hidden">
+                                Современный дизайн, просторный салон<br class="md:block hidden"> и продвинутые технологии</p>
+                            <button
+                                class="mt-3 bg-[#3BBCE6]  md:text-[20px] text-[11px] text-black font-regular md:font-medium px-[13px] py-[8px] md:py-[20px] md:px-[28px] rounded-[20px] shadow-md transition duration-300 hover:from-[#00117A] hover:to-[#4CD6F5] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#56E0EA]">
+                                Воспользоваться скидкой
+                            </button>
+                        </div>
+                        <div
+                            class='w-[203px] px-3 h-[36px] absolute bottom-[12px] space-x-[8px] right-[12px] md:bottom-[40px] md:right-[40px] md:w-[157px] md:h-[190px] flex items-center md:flex-col text-center text-white justify-center rounded-[12px] bg-[#C91E1E]'>
+                            <img class="w-[24px] md:w-auto" src="../assets/banners/Gift.svg" alt="Gift">
+                            <p class="text-[10px] md:text-[16px]">Доп оборудование<br class="md:block hidden">
+                                в подарок<br class="md:block hidden">
+                                на 100.000 руб!
+                            </p>
                         </div>
                     </div>
                 </div>
 
-<div class="absolute top-3 right-3 space-x-[28px] flex items-center justify-around bg-white bg-opacity-95 backdrop-blur-sm rounded-full p-4 shadow-md w-[730px] text-center">
-  <div class="flex flex-col font-medium text-left mr-6 text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">
-    <span>Срок действия</span>
-    <span>спецпредложения:</span>
-  </div>
+                <div
+                    class="md:absolute md:top-3 md:right-3 md:space-x-[28px] flex items-center justify-center bg-white bg-opacity-95 backdrop-blur-sm rounded-[20px] md:rounded-[28px] p-[12px] shadow-md w-full md:w-[730px] text-center">
+                    <div
+                        class="flex flex-col text-[11px] md:text-[16px] font-medium text-left mr-6 text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">
+                        <span>Срок действия</span>
+                        <span>спецпредложения:</span>
+                    </div>
 
-  <div class="flex items-center space-x-3">
-    <div class="flex flex-col items-center">
-      <span id="days" class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">04</span>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] mt-1">Дня</span>
-    </div>
+                    <div class="flex items-center space-x-1 md:space-x-3">
+                        <div class="flex flex-col items-center">
+                            <span id="days"
+                                class="text-[20px] md:text-[48px] md:h-[60px] font-regular text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">04</span>
+                            <span
+                                class="text-transparent  text-[12px] md:text-[20px] bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] ">Дня</span>
+                        </div>
 
-    <span class="text-[#1A77B7] text-xl">:</span>
+                        <span class="text-[#1A77B7] text-xl mb-[20px]">:</span>
 
-    <div class="flex flex-col items-center">
-      <span id="hours" class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">11</span>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] mt-1">Часов</span>
-    </div>
+                        <div class="flex flex-col items-center">
+                            <span id="hours"
+                                class="text-[20px] md:text-[48px] md:h-[60px] font-regular text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">11</span>
+                            <span
+                                class="text-transparent text-[12px] md:text-[20px] bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] ">Часов</span>
+                        </div>
 
-    <span class="text-[#1A77B7] text-xl">:</span>
+                        <span class="text-[#1A77B7] text-xl mb-[20px]">:</span>
 
-    <div class="flex flex-col items-center">
-      <span id="minutes" class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">40</span>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] mt-1">Минут</span>
-    </div>
+                        <div class="flex flex-col items-center">
+                            <span id="minutes"
+                                class="text-[20px] md:text-[48px] md:h-[60px] font-regular text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">40</span>
+                            <span
+                                class="text-transparent text-[12px] md:text-[20px] bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] ">Минут</span>
+                        </div>
 
-    <span class="text-[#1A77B7] text-xl">:</span>
+                        <span class="text-[#1A77B7] text-xl mb-[20px]">:</span>
 
-    <div class="flex flex-col items-center">
-      <span id="seconds" class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">59</span>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] mt-1">Секунд</span>
-    </div>
-  </div>
-</div>
+                        <div class="flex flex-col items-center">
+                            <span id="seconds"
+                                class="text-[20px] md:text-[48px] md:h-[60px] font-regular text-transparent bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6]">59</span>
+                            <span
+                                class="text-transparent text-[12px] md:text-[20px] bg-clip-text bg-gradient-to-r from-[#114B9C] to-[#38BAE6] ">Секунд</span>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                     <div class="w-3 h-3 bg-white bg-opacity-50 rounded-full"></div>
@@ -173,6 +243,7 @@
 
 
     <script src="../script/components/slider/bannersSlider.js"></script>
+    <script src="../script/components/timer/timer.js"></script>
 </body>
 
 </html>

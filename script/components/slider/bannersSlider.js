@@ -1,137 +1,142 @@
-    // === Слайдер ===
-    const slider = document.getElementById('slider');
-    let isDragging = false;
-    let startPos = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    let animationID = 0;
-    let currentIndex = 0;
-    const slides = slider.children;
-    const slideCount = slides.length;
+function initSlider() {
+  const slider = document.getElementById('slider');
+  if (!slider) {
+    console.error('Slider element not found');
+    return;
+  }
 
-    // Обновление позиции
-    const updateSlider = () => {
-      slider.style.transform = `translateX(${prevTranslate}px)`;
-    };
+  const slides = slider.children;
+  const slideCount = slides.length;
+  const slideWidth = () => slider.offsetWidth;
 
-    // Анимация при перетаскивании
-    const animation = () => {
-      currentTranslate = prevTranslate + (currentX - startPos);
-      updateSlider();
-      if (isDragging) requestAnimationFrame(animation);
-    };
+  let state = {
+    isDragging: false,
+    currentIndex: 0,
+    startPos: 0,
+    currentTranslate: 0,
+    prevTranslate: 0,
+  };
 
-    let currentX;
+  const applyTransform = () => {
+    slider.style.transform = `translateX(${state.prevTranslate}px)`;
+  };
 
-    const getPositionX = (e) => {
-      return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-    };
+  const getPointerX = (e) => {
+    if (e.type.includes('mouse')) return e.pageX;
+    if (e.touches && e.touches.length > 0) return e.touches[0].clientX;
+    return 0;
+  };
 
-    const start = (e) => {
-      isDragging = true;
-      startPos = getPositionX(e);
-      animationID = requestAnimationFrame(animation);
-      slider.style.transition = 'none';
-    };
+  const getTranslateForIndex = (index) => {
+    return -index * slideWidth();
+  };
 
-    const end = () => {
-      isDragging = false;
-      cancelAnimationFrame(animationID);
-
-      const movedBy = currentTranslate - prevTranslate;
-
-      // Если сдвиг больше 50px — переключаем слайд
-      if (movedBy < -50 && currentIndex < slideCount - 1) currentIndex++;
-      if (movedBy > 50 && currentIndex > 0) currentIndex--;
-
-      // Ограничиваем индекс
-      currentIndex = Math.max(0, Math.min(slideCount - 1, currentIndex));
-
-      // Фиксируем позицию
-      prevTranslate = -(currentIndex * slider.offsetWidth);
-      slider.style.transition = 'transform 0.5s ease';
-      updateSlider();
-
-      // Обновляем индикаторы
-      updateIndicators();
-    };
-
-    const move = (e) => {
-      if (isDragging) {
-        currentX = getPositionX(e);
-      }
-    };
-
-    // События
-    slider.addEventListener('mousedown', start);
-    slider.addEventListener('touchstart', start);
-
-    document.addEventListener('mousemove', move);
-    document.addEventListener('touchmove', move, { passive: false });
-
-    document.addEventListener('mouseup', end);
-    document.addEventListener('touchend', end);
-
-    // === Таймер ===
-    function startTimer() {
-      let timeLeft = {
-        days: 4,
-        hours: 11,
-        minutes: 40,
-        seconds: 59
-      };
-
-      const update = () => {
-        if (timeLeft.seconds > 0) {
-          timeLeft.seconds--;
-        } else {
-          if (timeLeft.minutes > 0) {
-            timeLeft.minutes--;
-            timeLeft.seconds = 59;
-          } else {
-            if (timeLeft.hours > 0) {
-              timeLeft.hours--;
-              timeLeft.minutes = 59;
-              timeLeft.seconds = 59;
-            } else {
-              if (timeLeft.days > 0) {
-                timeLeft.days--;
-                timeLeft.hours = 23;
-                timeLeft.minutes = 59;
-                timeLeft.seconds = 59;
-              } else {
-                // Таймер закончился
-                clearInterval(timer);
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
-              }
-            }
-          }
-        }
-
-        document.getElementById('days').textContent = String(timeLeft.days).padStart(2, '0');
-        document.getElementById('hours').textContent = String(timeLeft.hours).padStart(2, '0');
-        document.getElementById('minutes').textContent = String(timeLeft.minutes).padStart(2, '0');
-        document.getElementById('seconds').textContent = String(timeLeft.seconds).padStart(2, '0');
-      };
-
-      const timer = setInterval(update, 1000);
-      update(); // сразу показать
-    }
-
-    // Запускаем таймер
-    startTimer();
-
-    // Обновление индикаторов
-    function updateIndicators() {
-      const indicators = document.querySelector('.absolute.bottom-4').children;
-      for (let i = 0; i < indicators.length; i++) {
-        indicators[i].classList.toggle('bg-white', i === currentIndex);
-        indicators[i].classList.toggle('bg-opacity-80', i !== currentIndex);
-      }
-    }
-
-    // Инициализируем индикаторы
+  const goToSlide = (index) => {
+    const clampedIndex = Math.max(0, Math.min(slideCount - 1, index));
+    state.currentIndex = clampedIndex;
+    state.prevTranslate = getTranslateForIndex(clampedIndex);
+    slider.style.transition = 'transform 0.5s ease';
+    applyTransform();
     updateIndicators();
+  };
+
+  const animate = () => {
+    if (!state.isDragging) return;
+    state.currentTranslate = state.prevTranslate + (getPointerX(moveEvent) - state.startPos);
+    slider.style.transition = 'none';
+    applyTransform();
+    requestAnimationFrame(animate);
+  };
+
+  let moveEvent = null;
+
+  const handleStart = (e) => {
+    e.preventDefault();
+    state.isDragging = true;
+    state.startPos = getPointerX(e);
+    moveEvent = e;
+    requestAnimationFrame(animate);
+  };
+
+  const handleMove = (e) => {
+    if (!state.isDragging) return;
+    moveEvent = e;
+  };
+
+  const handleEnd = () => {
+    if (!state.isDragging) return;
+    state.isDragging = false;
+
+    const movedBy = state.currentTranslate - state.prevTranslate;
+
+    if (movedBy < -50 && state.currentIndex < slideCount - 1) {
+      goToSlide(state.currentIndex + 1);
+    } else if (movedBy > 50 && state.currentIndex > 0) {
+      goToSlide(state.currentIndex - 1);
+    } else {
+      goToSlide(state.currentIndex);
+    }
+  };
+
+  const updateIndicators = () => {
+    const indicatorsContainer = document.querySelector('.absolute.bottom-4');
+    if (!indicatorsContainer) return;
+
+    Array.from(indicatorsContainer.children).forEach((dot, index) => {
+      dot.classList.toggle('bg-white', index === state.currentIndex);
+      dot.classList.toggle('bg-opacity-80', index !== state.currentIndex);
+    });
+  };
+
+  const initIndicators = () => {
+    const container = document.querySelector('.absolute.bottom-4');
+    if (!container) return;
+
+    container.innerHTML = ''; 
+    for (let i = 0; i < slideCount; i++) {
+      const dot = document.createElement('div');
+      dot.className = `w-2 h-2 rounded-full ${
+        i === state.currentIndex ? 'bg-white' : 'bg-white bg-opacity-80'
+      }`;
+      container.appendChild(dot);
+    }
+  };
+
+  const bindEvents = () => {
+    slider.addEventListener('mousedown', handleStart);
+    slider.addEventListener('touchstart', handleStart, { passive: false });
+
+    document.addEventListener('mousemove', handleMove);
+    document.addEventListener('touchmove', handleMove, { passive: false });
+
+    document.addEventListener('mouseup', handleEnd);
+    document.addEventListener('touchend', handleEnd);
+
+    window.addEventListener('resize', () => {
+      goToSlide(state.currentIndex);
+    });
+  };
+
+  const init = () => {
+    state.prevTranslate = getTranslateForIndex(state.currentIndex);
+    applyTransform();
+
+    initIndicators();
+    updateIndicators();
+
+    bindEvents();
+  };
+
+  init();
+
+  return {
+    goTo: goToSlide,
+    next: () => goToSlide(state.currentIndex + 1),
+    prev: () => goToSlide(state.currentIndex - 1),
+    currentIndex: () => state.currentIndex,
+  };
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.slider = initSlider();
+});
