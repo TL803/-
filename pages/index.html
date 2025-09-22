@@ -13,6 +13,7 @@
     <!-- Подключаем Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/slider.css">
 
     <script>
         tailwind.config = {
@@ -48,14 +49,14 @@
 
             <nav class="hidden xl:flex space-x-[32px] text-sm font-medium">
                 <a href="./index.html" class="text-[#1C1C1C]">Главная</a>
-                <a href="" class="text-[#1C1C1C]">Автокредит</a>
-                <a href="" class="text-[#1C1C1C]">Trade-in</a>
-                <a href="" class="text-[#1C1C1C]">Акции</a>
-                <a href="" class="text-[#1C1C1C]">Лизинг</a>
-                <a href="" class="text-[#1C1C1C]">Выкуп</a>
-                <a href="" class="text-[#1C1C1C]">Авто под такси</a>
-                <a href="" class="text-[#1C1C1C]">Директ</a>
-                <a href="" class="text-[#1C1C1C]">Контакты</a>
+                <a href="./loan.html" class="text-[#1C1C1C]">Автокредит</a>
+                <a href="./tradein.html" class="text-[#1C1C1C]">Trade-in</a>
+                <a href="./stocks.html" class="text-[#1C1C1C]">Акции</a>
+                <a href="./leasing.html" class="text-[#1C1C1C]">Лизинг</a>
+                <a href="./ransom.html" class="text-[#1C1C1C]">Выкуп</a>
+                <a href="./taxi.html" class="text-[#1C1C1C]">Авто под такси</a>
+                <a href="./direct.html" class="text-[#1C1C1C]">Директ</a>
+                <a href="./contacts.html" class="text-[#1C1C1C]">Контакты</a>
             </nav>
         </div>
 
@@ -145,7 +146,7 @@
                         <div
                             class='w-[203px] px-3 h-[36px] absolute bottom-[12px] space-x-[8px] right-[12px] md:bottom-[40px] md:right-[40px] md:w-[157px] md:h-[190px] flex items-center md:flex-col text-center text-white justify-center rounded-[12px] bg-[#C91E1E]'>
                             <img class="w-[24px] md:w-auto" src="../assets/banners/Gift.svg" alt="Gift">
-                            <p class="text-[10px] md:text-[16px]">Доп оборудование<br class="md:block hidden">
+                            <p class="text-[10px] md:text-[14px]">Доп оборудование<br class="md:block hidden">
                                 в подарок<br class="md:block hidden">
                                 на 100.000 руб!
                             </p>
@@ -171,7 +172,7 @@
                         <div
                             class='w-[203px] px-3 h-[36px] absolute bottom-[12px] space-x-[8px] right-[12px] md:bottom-[40px] md:right-[40px] md:w-[157px] md:h-[190px] flex items-center md:flex-col text-center text-white justify-center rounded-[12px] bg-[#C91E1E]'>
                             <img class="w-[24px] md:w-auto" src="../assets/banners/Gift.svg" alt="Gift">
-                            <p class="text-[10px] md:text-[16px]">Доп оборудование<br class="md:block hidden">
+                            <p class="text-[10px] md:text-[14px]">Доп оборудование<br class="md:block hidden">
                                 в подарок<br class="md:block hidden">
                                 на 100.000 руб!
                             </p>
@@ -238,13 +239,11 @@
             </div>
         </section>
 
-        <section class="container mx-auto space-y-[40px]">
-            <h2 class="text-[36px] font-bold">Рекомендации для вас</h2>
-            <div data-component="car-container" class="flex flex-wrap justify-between gap-[36px]">
+        <section class="container mx-auto space-y-[40px] px-4 sm:px-6 md:px-8 py-10">
+            <h2 class="text-[36px] font-bold text-gray-900">Рекомендации для вас</h2>
+
+            <div data-component="car-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[36px]">
             </div>
-            <button class="w-full py-[30px] bg-[#FAFAFA] rounded-[32px] text-[28px] text-[#002486] font-semibold">
-                Смотреть еще
-            </button>
         </section>
 
         <section>
@@ -291,55 +290,214 @@
         </section>
 
 
-        <section class="mt-20 px-4">
-            <h2 class="text-[36px] font-bold">Похожие автомобили</h2>
-            <div data-component="car-container" class="flex flex-wrap justify-between gap-[36px]">
+
+
+
+        <section class="py-12 px-4 mx-auto">
+            <h2 class="text-3xl font-bold text-[#01101B] mb-10 text-center">Выгода в каждом клике</h2>
+
+            <!-- Основной грид: левая колонка (3 карточки) | правая колонка (1 карточка) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Левая колонка -->
+                <div class="flex flex-col space-y-8">
+                    <!-- Строка с карточками 1 и 2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Карточка 1: Твой авто — залог новой машины -->
+                        <div
+                            class="relative group rounded-2xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 min-h-[320px]">
+                            <img src="../assets/benefit/83a2de4691f30d46d011b3f1d8ff1a95b4e0a7a2 (1).jpg"
+                                alt="Твой авто — залог новой машины"
+                                class="w-full h-full object-cover absolute inset-0 transform group-hover:scale-110 transition-transform duration-300">
+                            <div
+                                class="absolute top-0 left-0 w-full bg-white bg-opacity-90 p-4 md:p-6 rounded-t-2xl text-[#01101B] font-medium">
+                                <div class="flex flex-wrap items-center whitespace-nowrap">
+                                    <span
+                                        class="text-white bg-[#0B3F96] px-3 py-1 md:px-4 md:py-2 rounded-full inline-block mr-2">Твой
+                                        авто</span>
+                                    <span>— залог новой машины!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Карточка 2: Лизинг — когда нужен автомобиль уже сейчас -->
+                        <div
+                            class="relative group rounded-2xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 min-h-[320px]">
+                            <img src="../assets/benefit/f62a1872c2f1b0613b997224e69988b2153d7017.jpg"
+                                alt="Лизинг — когда нужен автомобиль уже сейчас"
+                                class="w-full h-full object-cover absolute inset-0 transform group-hover:scale-110 transition-transform duration-300">
+                            <div
+                                class="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 p-4 md:p-6 rounded-b-2xl text-[#01101B] font-medium">
+                                <div class="flex flex-wrap">
+                                    <span class="mr-2">Лизинг — когда нужен автомобиль</span>
+                                    <span
+                                        class="text-white bg-[#0B3F96] px-3 py-1 md:px-4 md:py-2 rounded-full inline-block whitespace-nowrap">уже
+                                        сейчас</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 3: Готовое авто для работы в такси -->
+                    <div
+                        class="relative group rounded-2xl overflow-hidden shadow-lg  transform transition-all duration-300 hover:scale-105 min-h-[320px]">
+                        <img src="../assets/benefit/be4f186abe583cdbb148a3ec64133261ac7c4425.png"
+                            alt="Готовое авто для работы в такси"
+                            class="w-full h-full object-cover absolute inset-0 transform group-hover:scale-110 transition-transform duration-300">
+                        <div
+                            class="absolute top-0 left-0 w-full bg-white bg-opacity-90 p-4 md:p-6 rounded-t-2xl text-[#01101B] font-medium">
+                            <div class="flex flex-wrap items-center">
+                                <span>Готовое авто для</span>
+                                <span
+                                    class="text-white bg-[#0B3F96] px-3 py-1 md:px-4 md:py-2 rounded-full inline-block mx-2 whitespace-nowrap">работы
+                                    в такси</span>
+                                <span>— садись и зарабатывай!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: Карточка 4 -->
+                <div class="flex flex-col justify-start">
+                    <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg h-full min-h-[680px]">
+                        <img src="../assets/benefit/b41e391a3b799d3651e9438b3f9fa9f41e66f021.png"
+                            alt="Авто в кредит — без начального взноса!"
+                            class="w-full h-full object-cover object-bottom absolute inset-0">
+                        <div
+                            class="absolute top-0 left-0 w-full p-4 md:p-5 bg-white bg-opacity-95 text-[#01101B] font-medium">
+                            <div class="flex flex-col">
+                                <span class="whitespace-nowrap">Авто в кредит —</span>
+                                <span
+                                    class="bg-blue-600 text-white px-3 py-1 md:px-4 md:py-2 rounded-full inline-block whitespace-nowrap mt-1 w-fit">
+                                    без начального взноса!
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
 
-        <section>
-            <h2>Выгода в каждом клике</h2>
-            <div>
-                <div class="flex justify-center my-8">
-                    <div style="background-image: url('../assets/benefit/83a2de4691f30d46d011b3f1d8ff1a95b4e0a7a2 (1).jpg');"
-                        class="w-[300px] h-[300px] rounded-[24px] relative bg-cover bg-center bg-no-repeat">
-                        <div class="absolute top-0 left-0 w-full">
-                            <div class="p-[28px] rounded-[20px] bg-white text-[#01101B] font-medium leading-[40px]">
-                                <span class="text-white w-max bg-[#0B3F96] p-[10px] rounded-full">Твой авто</span> —
-                                залог новой машины!
-                            </div>
+        <section class="py-8 px-4  mx-auto">
+            <h2 class="text-3xl font-bold text-[#01101B] mb-10">Рассчитать кредит</h2>
+
+            <div class="bg-gray-100 rounded-xl p-8 shadow-sm">
+                <!-- Стоимость автомобиля и первоначальный взнос -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Стоимость автомобиля</label>
+                        <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm">
+                            <span class="text-lg font-semibold text-gray-900">2 000 000 ₽</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Первоначальный взнос</label>
+                        <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm">
+                            <span class="text-lg font-semibold text-gray-900">1 000 000 ₽</span>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center my-8">
-                    <div style="background-image: url('../assets/benefit/f62a1872c2f1b0613b997224e69988b2153d7017.jpg');"
-                        class="w-[300px] h-[300px] rounded-[24px] relative bg-cover bg-center bg-no-repeat">
-                        <div class="absolute bottom-0 left-0 w-full">
-                            <div class="p-[28px] rounded-[20px] bg-white text-[#01101B] font-medium leading-[40px]">
-                                Лизинг — когда нужен автомобиль <span
-                                    class="text-white w-max bg-[#0B3F96] p-[10px] rounded-full">уже сейчас</span>
-                            </div>
-                        </div>
+
+                <!-- Срок кредита -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Срок кредита</label>
+                    <input type="range" min="1" max="10" value="5"
+                        class="w-full h-[30px] bg-gray-200 rounded-full appearance-none cursor-pointer slider" />
+                    <div class="flex justify-between mt-2 text-sm text-gray-700">
+                        <span class="bg-white px-3 py-2 rounded-lg shadow-sm">5 лет</span>
+                        <span class="font-medium">Ежемесячный платеж</span>
+                        <span class="bg-white px-3 py-2 rounded-lg shadow-sm">1 000 000 ₽</span>
                     </div>
                 </div>
-                <div class="flex justify-center my-8">
-                    <div style="background-image: url('../assets/benefit/b41e391a3b799d3651e9438b3f9fa9f41e66f021.png');"
-                        class="w-[300px] h-[300px] rounded-[24px] relative bg-cover bg-center bg-no-repeat">
-                        <div class="absolute top-0 left-0 w-full">
-                            <div class="p-[28px] rounded-[20px] bg-white text-[#01101B] font-medium leading-[40px]">
-                                <span>Авто в кредит —</span>
-                                <span
-                                    class="text-white w-max bg-[#0B3F96] p-[10px] rounded-full">без начального взноса!</span>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div></div>
-                <div></div>
+            </div>
+        </section>
+
+
+        <section class="container mx-auto space-y-[40px] px-4 sm:px-6 md:px-8 py-10">
+            <h2 class="text-[36px] font-bold text-gray-900">Рекомендации для вас</h2>
+
+            <div data-component="car-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[36px]">
             </div>
         </section>
     </main>
+
+<footer class="bg-[#152F65] text-white mx-auto px-6 py-12 md:px-10 lg:px-14">
+    <div class="flex flex-col container mx-auto md:flex-row gap-10 items-start justify-between">
+
+        <!-- Левая колонка: информация -->
+        <div class="flex-1 space-y-8">
+
+            <!-- Адрес -->
+            <div>
+                <div class="flex items-center gap-2 text-sm mb-1">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 10C21 17 13 21 13 21C13 21 5 17 5 10C5 3 10 1 13 1C16 1 21 3 21 10Z"
+                            stroke="currentColor" stroke-width="2" />
+                        <path d="M13 1V3" stroke="currentColor" stroke-width="2" />
+                        <path d="M13 21V23" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    Адрес
+                </div>
+                <p class="text-lg font-medium">г. Москва, Береговой проезд, дом 4/6с3</p>
+            </div>
+
+            <!-- График работы -->
+            <div>
+                <div class="flex items-center gap-2 text-sm mb-1">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    График работы
+                </div>
+                <p class="text-lg font-medium">Ежедневно с 9:00 до 21:00</p>
+            </div>
+
+            <!-- Контакты -->
+            <div>
+                <div class="flex items-center gap-2 text-sm mb-1">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 15C21 17.2091 19.2091 19 17 19H7C4.79086 19 3 17.2091 3 15V9C3 6.79086 4.79086 5 7 5H17C19.2091 5 21 6.79086 21 9V15Z"
+                            stroke="currentColor" stroke-width="2" />
+                        <path d="M16 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <path d="M8 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <path d="M13 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    Контакты
+                </div>
+                <p class="text-lg font-medium">+7 999 999 99 99</p>
+            </div>
+
+            <!-- Кнопка "Обратная связь" -->
+            <button
+                class="mt-6 bg-white text-[#152F65] font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                Обратная связь
+            </button>
+        </div>
+
+        <!-- Правая колонка: карта (адаптивная) -->
+        <div class="w-full md:w-[500px] h-auto aspect-video rounded-xl overflow-hidden shadow-lg">
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A29abbbf054124cc69db31f2ac7c2cdfbb031d022af9fff6b7eb280d67ff71387&amp;source=constructor"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </div>
+
+    </div>
+
+    <!-- Подвал -->
+    <div class="mt-12 container mx-auto text-xs leading-relaxed text-center md:text-left">
+        Все права защищены<br>
+        ООО Ведьмин дом, вл. 24, корп.3 ОГРН 11769520105554480 ИНН 6950207759
+    </div>
+</footer>
 
 
 

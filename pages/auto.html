@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О компании</title>
+
+    <!-- Подключаем шрифт Geologica от Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap">
+
+    <!-- Подключаем Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/slider.css">
+    <link rel="stylesheet" href="../style/checkbox.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        customGray: '#1a1a1a',
+                        lightGray: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Geologica', 'ui-sans-serif', 'system-ui', 'sans-serif']
+                    },
+
+                }
+            }
+        }
+    </script>
+
+    <style>
+
+
+    </style>
+</head>
+
+<body class="font-sans  text-[#01101B]">
+    <header
+        class="container mx-auto md:px-[40px] px-4 md:py-[28px] my-6 rounded-xl bg-white  flex items-center justify-between md:shadow-[0px_20px_50px_rgba(0,0,0,0.1)]">
+        <div class="flex items-center gap-[42px]">
+            <a href="./index.html" class="text-primary">
+                <img src="../assets/Logo Независимость(2) 2.svg" alt="">
+            </a>
+
+            <nav class="hidden xl:flex space-x-[32px] text-sm font-medium">
+                <a href="./index.html" class="text-[#1C1C1C]">Главная</a>
+                <a href="" class="text-[#1C1C1C]">Автокредит</a>
+                <a href="" class="text-[#1C1C1C]">Trade-in</a>
+                <a href="" class="text-[#1C1C1C]">Акции</a>
+                <a href="" class="text-[#1C1C1C]">Лизинг</a>
+                <a href="" class="text-[#1C1C1C]">Выкуп</a>
+                <a href="" class="text-[#1C1C1C]">Авто под такси</a>
+                <a href="" class="text-[#1C1C1C]">Директ</a>
+                <a href="" class="text-[#1C1C1C]">Контакты</a>
+            </nav>
+        </div>
+
+        <div class="flex xl:hidden space-x-[16px]">
+            <a href="tel:+79999999999"><img src="../assets/mobile/Телефон.svg" alt="телефон"></a>
+            <img src="../assets/mobile/burger.svg" alt="бургер">
+        </div>
+
+        <button class="hidden xl:block px-[24px] py-[16px]  font-regular text-[#000F6E] bg-[#56E0EA] rounded-[16px]">
+            Обратная связь
+        </button>
+    </header>
+
+    <main class="container mx-auto mt-[96px] px-4 space-y-[60px]">
+        <section class="bg-white rounded-2xl shadow-sm overflow-hidden p-6 md:p-8"
+            style="box-shadow: 2px 4px 40px 0 rgba(173, 173, 173, 0.2);">
+            <div class="flex flex-col md:flex-row justify-between gap-8">
+
+                <div class="md:w-[590px] w-full flex flex-col gap-8 md:gap-10">
+                    <div>
+                        <h1
+                            class="text-2xl md:text-4xl lg:text-5xl xl:text-[48px] font-bold text-[#01101B] leading-tight">
+                            Kaiyi X3 Pro
+                        </h1>
+                        <p class="text-xl md:text-2xl lg:text-3xl xl:text-[36px] text-[#01101B] mt-3 md:mt-4">
+                            Внедорожник
+                        </p>
+                        <p class="text-xl md:text-3xl lg:text-4xl xl:text-[48px] font-bold text-[#01101B] mt-4 md:mt-5">
+                            от 1 149 000 руб
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 md:space-y-5">
+                        <div class="flex justify-between items-center px-4 py-3 md:py-4 bg-gray-50 rounded-lg">
+                            <span class="text-base md:text-lg lg:text-xl xl:text-[20px] font-semibold text-[#01101B]">
+                                Мощность 100 л.с
+                            </span>
+                            <img src="../assets/auto/icons/Vector.svg" alt="">
+                        </div>
+
+                        <div class="flex justify-between items-center px-4 py-3 md:py-4 bg-gray-50 rounded-lg">
+                            <span class="text-base md:text-lg lg:text-xl xl:text-[20px] font-semibold text-[#01101B]">
+                                Разгон 12.6 сек.
+                            </span>
+                            <img src="../assets/auto/icons/dashboard-speed-01.svg" alt="">
+                        </div>
+
+                        <div class="flex justify-between items-center px-4 py-3 md:py-4 bg-gray-50 rounded-lg">
+                            <span class="text-base md:text-lg lg:text-xl xl:text-[20px] font-semibold text-[#01101B]">
+                                Скорость 175 км/ч
+                            </span>
+                            <img src="../assets/auto/icons/c------- 1.svg" alt="">
+                        </div>
+
+                        <div class="flex justify-between items-center px-4 py-3 md:py-4 bg-gray-50 rounded-lg">
+                            <span class="text-base md:text-lg lg:text-xl xl:text-[20px] font-semibold text-[#01101B]">
+                                Расход 5.9 л/100 км
+                            </span>
+                            <img src="../assets/auto/icons/Group.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-end justify-center relative">
+                    <img src="../assets/auto/Rectangle 18.png" alt="Kaiyi X3 Pro" class="object-contain mb-6 md:mb-8" />
+
+                    <div class="flex gap-2 md:gap-3 lg:gap-4 xl:gap-5 justify-center">
+                        <button
+                            class="w-8 h-6 md:w-10 md:h-8 lg:w-12 lg:h-9 xl:w-[76px] xl:h-[57px] rounded-lg bg-[#002b7f] transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-3 gap-4 md:gap-6 lg:gap-8 mt-8 md:mt-10 mx-auto">
+                <img src="../assets/auto/moreCarImages/Trade-in.png" alt=""
+                    class="w-full cursor-pointer h-auto aspect-[4/3] object-cover hover:scale-105 transition-transform duration-300" />
+                <img src="../assets/auto/moreCarImages/Прямая скидка-1.png" alt=""
+                    class="w-full cursor-pointer h-auto aspect-[4/3] object-cover hover:scale-105 transition-transform duration-300" />
+                <img src="../assets/auto/moreCarImages/Прямая скидка.png" alt=""
+                    class="w-full cursor-pointer h-auto aspect-[4/3] object-cover hover:scale-105 transition-transform duration-300" />
+            </div>
+
+            <div class=" w-full">
+                <button
+                    class="w-full bg-gradient-to-r from-blue-700 to-cyan-400 text-white font-semibold text-lg md:text-xl py-4 md:py-5 rounded-xl transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Рассчитать в кредит
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="relative w-full mx-auto mt-8 mb-6">
+                    <div
+                        class="relative bg-gradient-to-r from-cyan-300 to-blue-500 rounded-2xl p-4 md:p-6 shadow-md overflow-hidden">
+                        <!-- Иконки слева -->
+                        <img src="../assets/auto/icons/Vector (1).svg" alt=""
+                            class="absolute left-4 top-1 w-4 h-4 text-white" />
+                        <img src="../assets/auto/icons/Vector (1).svg" alt=""
+                            class="absolute left-12 top-4 w-5 h-5 text-white" />
+                        <img src="../assets/auto/icons/Vector (1).svg" alt=""
+                            class="absolute left-20 top-12 w-7 h-7 text-white" />
+                        <img src="../assets/auto/icons/Vector (1).svg" alt=""
+                            class="absolute left-8 bottom-4 w-3 h-3 text-white" />
+
+                        <!-- Иконки справа -->
+                        <img src="../assets/auto/icons/Vector (1).svg" alt=""
+                            class="absolute right-4 top-1 w-4 h-4 text-white" />
+                        <img src="../assets/auto/icons/Vector (1).svg" alt=""
+                            class="absolute right-12 top-4 w-5 h-5 text-white" />
+                        <img src="../assets/auto/icons/Vector (1).svg" alt=""
+                            class="absolute right-20 top-12 w-7 h-7 text-white" />
+                        <img src="../assets/auto/icons/Vector (1).svg" alt=""
+                            class="absolute right-8 bottom-4 w-3 h-3 text-white" />
+
+                        <!-- Центральный текст -->
+                        <div class="text-center relative z-10">
+                            <p class="text-xl md:text-2xl font-bold text-[#002789] mb-1">до 200 000 ₽</p>
+                            <p class="text-sm md:text-base text-[#01101B]">Максимальная выгода при покупке до 20 ноября
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <div style="box-shadow: 2px 4px 40px 0 rgba(173, 173, 173, 0.2);"
+                        class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 relative">
+                        <div class="flex flex-col items-start">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="myCheckbox" />
+                                <span class="checkmark">✓</span>
+                            </label>
+                            <div class="flex-1 mt-5">
+                                <h3 class="text-[24px] font-semibold text-[#01101B] mb-2">Trade-in</h3>
+                                <p class="text-gray-600 mb-4">Обнови машину без лишних хлопот — твой старый авто идёт в
+                                    счёт оплаты нового.</p>
+                                <b class="text-[#0070DD] text-[24px] font-semibold">80 000 ₽</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="box-shadow: 2px 4px 40px 0 rgba(173, 173, 173, 0.2);"
+                        class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 relative">
+                        <div class="flex flex-col items-start">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="myCheckbox" />
+                                <span class="checkmark">✓</span>
+                            </label>
+                            <div class="flex-1 mt-5">
+                                <h3 class="text-xl font-semibold text-[#01101B] mb-2">Kaiyi Finance</h3>
+                                <p class="text-gray-600 mb-4">Доступное автокредитование с выгодными ценами и
+                                    дополнительными скидками на весь модельный ряд.</p>
+                                <b class="text-[#0070DD] text-[24px] font-semibold">80 000 ₽</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="box-shadow: 2px 4px 40px 0 rgba(173, 173, 173, 0.2);"
+                        class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 relative">
+                        <div class="flex flex-col items-start">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="myCheckbox" />
+                                <span class="checkmark">✓</span>
+                            </label>
+                            <div class="flex-1 mt-5">
+                                <h3 class="text-xl font-semibold text-[#01101B] mb-2">Прямая скидка</h3>
+                                <p class="text-gray-600 mb-4">Выгода от нашего автосалона.</p>
+                                <b class="text-[#0070DD] text-[24px] font-semibold">80 000 ₽</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mx-auto py-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div style="box-shadow: 2px 4px 40px 0 rgba(173, 173, 173, 0.2);"
+                        class="bg-white rounded-lg p-5 md:p-6 lg:px-9 lg:py-10 flex flex-col lg:flex-row box-border">
+                        <div class="lg:mr-6 mb-4 lg:mb-0 flex justify-center lg:justify-start w-full lg:w-20">
+                            <div class="w-16 h-16 lg:w-20 lg:h-20 flex items-start justify-center">
+                                <img src="../assets/auto/icons/kaiyi finance/Директ.svg" alt="Иконка"
+                                    class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3
+                                class="text-xl md:text-2xl lg:text-[28px] font-semibold text-gray-900 mb-3 md:mb-4 text-center lg:text-left">
+                                Лучшие условия автокредитования
+                            </h3>
+                            <p class="text-gray-700 text-sm md:text-base lg:text-[17px] leading-relaxed">
+                                Ставка от 4,9% — это одно из самых выгодных решений на рынке. А низкие платежи каждый
+                                месяц позволяют существенно снизить общие расходы на ваш новый автомобиль.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 2: Ваш личный эксперт всегда на связи -->
+                    <div style="box-shadow: 2px 4px 40px 0 rgba(173, 173, 173, 0.2);"
+                        class="bg-white rounded-lg p-5 md:p-6 lg:px-9 lg:py-10 flex flex-col lg:flex-row box-border">
+                        <!-- Контейнер для иконки — центрируется на адаптиве, слева на десктопе -->
+                        <div class="lg:mr-6 mb-4 lg:mb-0 flex justify-center lg:justify-start w-full lg:w-20">
+                            <div class="w-16 h-16 lg:w-20 lg:h-20 flex items-start justify-center">
+                                <img src="../assets/auto/icons/kaiyi finance/Директ.svg" alt="Иконка"
+                                    class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3
+                                class="text-xl md:text-2xl lg:text-[28px] font-semibold text-gray-900 mb-3 md:mb-4 text-center lg:text-left">
+                                Ваш личный эксперт всегда на связи
+                            </h3>
+                            <p class="text-gray-700 text-sm md:text-base lg:text-[17px] leading-relaxed">
+                                Оставьте заявку на интересующую модель и узнайте предварительную стоимость кредита
+                                онлайн. В течение 30 минут наш специалист свяжется с вами и бесплатно проконсультирует
+                                по всем условиям.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка 3: Доступное кредитование для каждого -->
+                <div style="box-shadow: 2px 4px 40px 0 rgba(173, 173, 173, 0.2);"
+                    class="bg-white rounded-lg p-5 md:p-6 lg:px-9 lg:py-10 flex flex-col lg:flex-row box-border">
+                    <!-- Контейнер для иконки — центрируется на адаптиве, слева на десктопе -->
+                    <div class="lg:mr-6 mb-4 lg:mb-0 flex justify-center lg:justify-start w-full lg:w-20">
+                        <div class="w-16 h-16 lg:w-20 lg:h-20 flex items-start justify-center">
+                            <img src="../assets/auto/icons/kaiyi finance/Директ.svg" alt="Иконка"
+                                class="max-w-full max-h-full object-contain">
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="text-xl md:text-2xl lg:text-[28px] font-semibold text-gray-900 mb-3 md:mb-4 text-center lg:text-left">
+                            Доступное кредитование для каждого
+                        </h3>
+                        <p class="text-gray-700 text-sm md:text-base lg:text-[17px] leading-relaxed">
+                            В нашем автосалоне не нужен первый взнос. Мы предоставляем рассрочку на эту сумму без
+                            переплат, что открывает путь к автомобилю для большинства клиентов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex justify-between">
+                <button class="bg-[#FAFAFA] rounded-t-2xl 
+               py-2 px-4 text-base font-semibold
+               sm:py-3 sm:px-5 sm:text-lg
+               md:py-6 md:px-8 md:text-xl
+               lg:py-8 lg:px-12 lg:text-2xl
+               xl:py-[28px] xl:px-[90px] xl:text-[32px]">
+                    Комплектации
+                </button>
+                <button class="bg-[#FAFAFA] rounded-t-2xl 
+               py-2 px-4 text-base font-semibold
+               sm:py-3 sm:px-5 sm:text-lg
+               md:py-6 md:px-8 md:text-xl
+               lg:py-8 lg:px-12 lg:text-2xl
+               xl:py-[28px] xl:px-[90px] xl:text-[32px]">
+                    Характеристики
+                </button>
+            </div>
+            <div class="bg-[#FAFAFA]">
+
+                <div></div>
+
+                <div id="content-complectations" class="content-section">
+                    <div class="w-full">
+                        <div class="mx-auto px-4 py-8 space-y-6">
+
+                            <h2 class="text-xl lg:text-2xl font-semibold mb-6 text-blue-600 ">
+                                1.4 л. 6МКПП (100 л.с.) FWD
+                            </h2>
+
+                            <div>
+                                <details class="w-full group space-y-4">
+                                    <summary class="list-none cursor-pointer">
+                                        <div
+                                            class="grid grid-cols-1 xl:grid-cols-5 gap-3 lg:gap-6 items-center bg-white lg:bg-[#fafafa] p-3 lg:p-5 rounded-xl  hover:shadow-sm transition-shadow">
+                                            <div class="flex items-center gap-2 justify-center xl:justify-start">
+                                                <label class="custom-checkbox w-8 h-8">
+                                                    <input type="checkbox" id="myCheckbox" />
+                                                    <span class="checkmark">✓</span>
+                                                </label>
+                                                <span
+                                                    class="font-semibold text-base lg:text-lg text-gray-800">Active</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform duration-200"
+                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                </svg>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <span
+                                                    class="line-through text-base lg:text-lg text-gray-500 hidden xl:block">
+                                                    1 800 000 ₽
+                                                </span>
+                                            </div>
+
+                                            <div class="flex justify-center">
+                                                <span
+                                                    class="text-blue-600 font-semibold text-base lg:text-lg flex items-center gap-2 whitespace-nowrap">
+                                                    <span class="xl:hidden line-through text-gray-400 text-xs">1 800 000
+                                                        ₽</span>
+                                                    от 1 408 000 ₽
+                                                </span>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <span class="text-gray-600 text-sm lg:text-base whitespace-nowrap">
+                                                    В кредит от 6 807 ₽/мес.
+                                                </span>
+                                            </div>
+
+                                            <div
+                                                class="flex flex-col xl:flex-row gap-2 mt-2 xl:mt-0 justify-center xl:justify-start w-full xl:w-auto">
+                                                <button data-toggle-timer-container="Credit"
+                                                    class="px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-700 transition-colors text-xs lg:text-sm font-medium whitespace-nowrap flex-shrink-0 w-full xl:w-auto">
+                                                    В кредит
+                                                </button>
+
+                                                <button data-toggle-timer-container="Trade-in"
+                                                    class="px-4 py-2 bg-cyan-400 text-white rounded-md hover:bg-cyan-300 transition-colors text-xs lg:text-sm font-medium whitespace-nowrap flex-shrink-0 w-full xl:w-auto">
+                                                    Trade-in
+                                                </button>
+
+                                                <button
+                                                    class="px-3 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200 transition-colors text-xs lg:text-sm flex items-center justify-center gap-1 w-full xl:w-auto xl:order-first whitespace-nowrap flex-shrink-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2h8a2 2 0 002-2z" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </summary>
+
+                                    <div class=" rounded-xl p-4 lg:p-6 mt-[-1px] ">
+                                        <div
+                                            class="space-y-3 text-gray-700 columns-1 sm:columns-2 lg:columns-3 [&>div]:break-inside-avoid [&>div]:mb-4">
+                                            <div>
+                                                <strong class="text-gray-800 block mb-1 text-sm">Безопасность:</strong>
+                                                <ul class="list-none pl-4 space-y-1">
+                                                    <li class="text-xs leading-tight">• Подушки безопасности</li>
+                                                    <li class="text-xs leading-tight">• ABS</li>
+                                                    <li class="text-xs leading-tight">• ESP</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <strong class="text-gray-800 block mb-1 text-sm">Интерьер:</strong>
+                                                <ul class="list-none pl-4 space-y-1">
+                                                    <li class="text-xs leading-tight">• Материалы высокого качества</li>
+                                                    <li class="text-xs leading-tight">• Подсветка салона</li>
+                                                    <li class="text-xs leading-tight">• Эргономичные сиденья</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <strong class="text-gray-800 block mb-1 text-sm">Дополнительно:</strong>
+                                                <ul class="list-none pl-4 space-y-1">
+                                                    <li class="text-xs leading-tight">• Центральный замок</li>
+                                                    <li class="text-xs leading-tight">• Бортовой компьютер</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+
+                            <div class="flex  mt-8">
+                                <a href="/comparison" class="block w-full max-w-[545px]">
+                                    <button id="compareButton"
+                                        class="w-full h-12 lg:h-[60px] rounded-lg bg-blue-600 text-white text-base lg:text-lg font-medium hover:bg-blue-700 transition-colors whitespace-nowrap">
+                                        Сравнить комплектации
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <section class="container mx-auto space-y-[40px] px-4 sm:px-6 md:px-8 py-10">
+        <h2 class="text-[36px] font-bold text-gray-900">Рекомендации для вас</h2>
+
+        <div data-component="car-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[36px]">
+        </div>
+    </section>
+
+    <footer class="bg-[#152F65] text-white mx-auto px-6 py-12 md:px-10 lg:px-14">
+        <div class="flex flex-col container mx-auto md:flex-row gap-10 items-start justify-between">
+
+            <!-- Левая колонка: информация -->
+            <div class="flex-1 space-y-8">
+
+                <!-- Адрес -->
+                <div>
+                    <div class="flex items-center gap-2 text-sm mb-1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10C21 17 13 21 13 21C13 21 5 17 5 10C5 3 10 1 13 1C16 1 21 3 21 10Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M13 1V3" stroke="currentColor" stroke-width="2" />
+                            <path d="M13 21V23" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        Адрес
+                    </div>
+                    <p class="text-lg font-medium">г. Москва, Береговой проезд, дом 4/6с3</p>
+                </div>
+
+                <!-- График работы -->
+                <div>
+                    <div class="flex items-center gap-2 text-sm mb-1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        График работы
+                    </div>
+                    <p class="text-lg font-medium">Ежедневно с 9:00 до 21:00</p>
+                </div>
+
+                <!-- Контакты -->
+                <div>
+                    <div class="flex items-center gap-2 text-sm mb-1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 15C21 17.2091 19.2091 19 17 19H7C4.79086 19 3 17.2091 3 15V9C3 6.79086 4.79086 5 7 5H17C19.2091 5 21 6.79086 21 9V15Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M16 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M8 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M13 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        Контакты
+                    </div>
+                    <p class="text-lg font-medium">+7 999 999 99 99</p>
+                </div>
+
+                <!-- Кнопка "Обратная связь" -->
+                <button
+                    class="mt-6 bg-white text-[#152F65] font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                    Обратная связь
+                </button>
+            </div>
+
+            <!-- Правая колонка: карта (адаптивная) -->
+            <div class="w-full md:w-[500px] h-auto aspect-video rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A29abbbf054124cc69db31f2ac7c2cdfbb031d022af9fff6b7eb280d67ff71387&amp;source=constructor"
+                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen loading="lazy">
+                </iframe>
+            </div>
+
+        </div>
+
+        <!-- Подвал -->
+        <div class="mt-12 container mx-auto text-xs leading-relaxed text-center md:text-left">
+            Все права защищены<br>
+            ООО Ведьмин дом, вл. 24, корп.3 ОГРН 11769520105554480 ИНН 6950207759
+        </div>
+    </footer>
+
+    <script src="../script/modules/iterations/cars.js"></script>
+
+</body>
+
+</html>
