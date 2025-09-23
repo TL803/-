@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О компании</title>
+
+    <!-- Подключаем шрифт Geologica от Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap">
+
+    <!-- Подключаем Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/slider.css">
+    <link rel="stylesheet" href="../style/checkbox.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        customGray: '#1a1a1a',
+                        lightGray: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Geologica', 'ui-sans-serif', 'system-ui', 'sans-serif']
+                    },
+
+                }
+            }
+        }
+    </script>
+
+    <style>
+
+
+    </style>
+</head>
+
+<body class="font-sans  text-[#01101B]">
+    <header
+        class="container mx-auto md:px-[40px] px-4 md:py-[28px] my-6 rounded-xl bg-white  flex items-center justify-between md:shadow-[0px_20px_50px_rgba(0,0,0,0.1)]">
+        <div class="flex items-center gap-[42px]">
+            <a href="./index.html" class="text-primary">
+                <img src="../assets/Logo Независимость(2) 2.svg" alt="">
+            </a>
+
+            <nav class="hidden xl:flex space-x-[32px] text-sm font-medium">
+                <a href="./index.html" class="text-[#1C1C1C]">Главная</a>
+                <a href="./loan.html" class="text-[#1C1C1C]">Автокредит</a>
+                <a href="./tradein.html" class="text-[#1C1C1C]">Trade-in</a>
+                <a href="./stocks.html" class="text-[#1C1C1C]">Акции</a>
+                <a href="./leasing.html" class="text-[#1C1C1C]">Лизинг</a>
+                <a href="./ransom.html" class="text-[#1C1C1C]">Выкуп</a>
+                <a href="./taxi.html" class="text-[#1C1C1C]">Авто под такси</a>
+                <a href="./direct.html" class="text-[#1C1C1C]">Директ</a>
+                <a href="./contacts.html" class="text-[#1C1C1C]">Контакты</a>
+            </nav>
+        </div>
+
+        <div class="flex xl:hidden space-x-[16px]">
+            <a href="tel:+79999999999"><img src="../assets/mobile/Телефон.svg" alt="телефон"></a>
+            <img src="../assets/mobile/burger.svg" alt="бургер">
+        </div>
+
+        <button class="hidden xl:block px-[24px] py-[16px]  font-regular text-[#000F6E] bg-[#56E0EA] rounded-[16px]">
+            Обратная связь
+        </button>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-0 py-6">
+
+        <section class="flex flex-col xl:flex-row gap-4 sm:gap-6 p-3 sm:p-6 md:p-8">
+            <form id="car-selection"
+                class="w-full xl:w-[40%] h-max flex-shrink-0 space-y-6 sm:space-y-8 xl:space-y-16 bg-white rounded-xl shadow-lg shadow-[0px_20px_50px_rgba(0,0,0,0.1)] p-6 sm:p-8 xl:p-12">
+                <div>
+                    <h3
+                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
+                        1. Выберите автомобиль
+                    </h3>
+                    <div class="space-y-6 sm:space-y-7 xl:space-y-10">
+                        <div class="relative">
+                            <select name="car_brand"
+                                class="w-full bg-gray-100 border border-gray-300 rounded-xl px-4 sm:px-6 xl:px-8 py-3 sm:py-5 text-base sm:text-[22px] xl:text-[24px] text-gray-700 focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-blue-300 appearance-none">
+                                <option value="">Марка автомобиля</option>
+                                <option value="Kaiyi">Kaiyi</option>
+                            </select>
+                            <svg class="absolute right-3 sm:right-5 xl:right-6 top-3.5 sm:top-5 w-5 sm:w-6 h-5 sm:h-6 text-gray-500"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <div class="relative">
+                            <select name="model"
+                                class="w-full bg-gray-100 border border-gray-300 rounded-xl px-4 sm:px-6 xl:px-8 py-3 sm:py-5 text-base sm:text-[22px] xl:text-[24px] text-gray-700 focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-blue-300 appearance-none">
+                                <option value="">Модель</option>
+                                <option value="X3 Pro">X3 Pro</option>
+                            </select>
+                            <svg class="absolute right-3 sm:right-5 xl:right-6 top-3.5 sm:top-5 w-5 sm:w-6 h-5 sm:h-6 text-gray-500"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <div class="relative">
+                            <select name="complectation"
+                                class="w-full bg-gray-100 border border-gray-300 rounded-xl px-4 sm:px-6 xl:px-8 py-3 sm:py-5 text-base sm:text-[22px] xl:text-[24px] text-gray-700 focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-blue-300 appearance-none">
+                                <option value="">Комплектация</option>
+                                <option value="Premium">Premium</option>
+                            </select>
+                            <svg class="absolute right-3 sm:right-5 xl:right-6 top-3.5 sm:top-5 w-5 sm:w-6 h-5 sm:h-6 text-gray-500"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3
+                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
+                        2. Срок кредитования
+                    </h3>
+                    <div class="mb-6 sm:mb-8">
+                        <input type="range" id="loanTermSlider" min="1" max="7" step="1" value="3"
+                            class="w-full h-2 sm:h-4 bg-gray-300 rounded-xl appearance-none cursor-pointer slider" />
+                        <div
+                            class="flex justify-between mt-4 sm:mt-6 text-xs sm:text-[16px] text-[#000F6E] font-medium flex-wrap gap-y-2">
+                            <span>1 год</span><span>2 года</span><span>3 года</span><span>4 года</span><span>5
+                                лет</span><span>6 лет</span><span>7 лет</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3
+                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
+                        3. Первоначальный взнос
+                    </h3>
+                    <div class="mb-6 sm:mb-8">
+                        <input type="range" id="initialPaymentSlider" min="10" max="70" step="7" value="20"
+                            class="w-full h-2 sm:h-4 bg-gray-300 rounded-xl appearance-none cursor-pointer slider" />
+                        <div
+                            class="flex justify-between mt-4 sm:mt-6 text-xs sm:text-[16px] text-[#000F6E] font-medium flex-wrap gap-y-2">
+                            <span>10%</span><span>20%</span><span>30%</span><span>40%</span><span>50%</span><span>60%</span><span>70%</span><span>80%</span><span>90%</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="flex justify-between text-sm sm:text-[18px] text-[#000F6E] font-medium">
+                            <p class="min-w-0 break-words hyphens-auto">Взнос</p>
+                            <p id="initialPaymentAmount" class="min-w-0 break-words hyphens-auto">700 000 ₽</p>
+                        </div>
+                        <div class="flex justify-between text-sm sm:text-[18px] text-[#000F6E] font-medium">
+                            <p class="min-w-0 break-words hyphens-auto">Ежемесячный платёж</p>
+                            <p id="monthlyPayment" class="min-w-0 break-words hyphens-auto">72 000 ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3
+                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
+                        4. Введите ваши данные
+                    </h3>
+                    <div class="space-y-6 sm:space-y-7 xl:space-y-10">
+                        <div>
+                            <input type="text" id="calc-name" name="name" placeholder="ФИО"
+                                class="w-full bg-gray-100 border border-gray-300 rounded-xl px-4 sm:px-6 xl:px-8 py-3 sm:py-5 text-base sm:text-[22px] xl:text-[24px] text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-blue-300 appearance-none" />
+                        </div>
+                        <div>
+                            <input type="tel" id="calc-phone" name="telephone" placeholder="Ваш номер телефона"
+                                class="w-full bg-gray-100 border border-gray-300 rounded-xl px-4 sm:px-6 xl:px-8 py-3 sm:py-5 text-base sm:text-[22px] xl:text-[24px] text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-blue-300 appearance-none" />
+                        </div>
+
+                        <div class="flex items-center space-x-3 sm:space-x-5 mt-4">
+                            <label class="custom-checkbox w-10 h-8">
+                                <input checked type="checkbox" id="myCheckbox" />
+                                <span class="checkmark">✓</span>
+                            </label>
+                            <span
+                                class="text-sm sm:text-[18px] text-gray-700 leading-relaxed min-w-0 break-words hyphens-auto">
+                                Я согласен с политикой обработки персональных данных
+                            </span>
+                        </div>
+
+                        <p
+                            class="text-xs sm:text-[14px] text-red-600 font-medium mt-2 min-w-0 break-words hyphens-auto">
+                            *Кредит предоставляется только гражданам РФ
+                        </p>
+
+                        <button type="submit"
+                            class="w-full py-4 sm:py-6 xl:py-7 mt-4 bg-gradient-to-r from-[#000F6E] to-[#56E0EA] text-white text-base sm:text-[22px] xl:text-[24px] font-semibold rounded-xl shadow-md sm:shadow-xl transition-all duration-300 hover:from-[#00117A] hover:to-[#4CD6F5] hover:shadow-lg sm:hover:shadow-2xl focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-offset-1 focus:ring-[#56E0EA]">
+                            Отправить заявку
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="w-full xl:w-[60%] flex flex-col px-2 sm:px-4 md:px-6 xl:px-0 mt-6 xl:mt-0">
+
+                <div class="mb-3 sm:mb-4 ">
+                    <img id="mock" src="../assets/auto/Rectangle 218.png" alt="Kaiyi X3 Pro"
+                        class="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96  xl:max-h-[30rem] object-contain mx-auto  rounded-lg  shadow-sm" />
+                    <div id="selected-car"
+                        class=" rounded-xl  p-5 sm:p-6 md:p-8  xl:p-10 bg-white hidden shadow-lg shadow-[0px_10px_30px_rgba(0,0,0,0.08)]">
+                        <div class="flex flex-col md:flex-row md:items-start gap-6 mb-6">
+                            <div class="flex-1">
+                                <h2 id="car-title" class="text-2xl sm:text-3xl font-bold text-[#01101B]">Выберите автомобиль</h2>
+                                <p class="text-sm sm:text-base text-gray-700 mt-1">Внедорожник</p>
+                                <p class="text-lg sm:text-xl font-semibold text-[#000F6E] mt-2">от 1 149 000 руб</p>
+                                <div class="hidden md:block mt-4">
+                                    <div data-color-container class="flex flex-wrap gap-3">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="md:w-1/2 flex justify-center md:justify-end">
+                                <img data-image src="../assets/auto/Rectangle 18.png" alt="Kaiyi X3 Pro"
+                                    class="max-w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 xl:max-h-[30rem] object-contain rounded-lg" />
+                            </div>
+
+                            <div class=" md:hidden mt-4">
+                                <div data-color-container class="flex flex-wrap gap-3">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Мощность 100 л.с</span>
+                                <img src="../assets/auto/icons/Vector.svg" alt="">
+
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Разгон до 100км/ч 12.6
+                                    сек.</span>
+                                <img src="../assets/auto/icons/dashboard-speed-01.svg" alt="">
+
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Макс. cкорость 175
+                                    км/ч</span>
+                                <img src="../assets/auto/icons/c------- 1.svg" alt="">
+
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Расход 5.9 л/100 км</span>
+                                <img src="../assets/auto/icons/Group.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 mt-8 max-w-4xl mx-auto w-full">
+                            <div class="rounded-lg overflow-hidden bg-white shadow-sm">
+                                <img src="../assets/auto/moreCarImages/Trade-in.png" alt="Trade-in"
+                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden bg-white shadow-sm">
+                                <img src="../assets/auto/moreCarImages/Прямая скидка-1.png" alt="Прямая скидка 1"
+                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden bg-white shadow-sm">
+                                <img src="../assets/auto/moreCarImages/Прямая скидка.png" alt="Прямая скидка"
+                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full mx-auto py-3 sm:py-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-5">
+                        <div
+                            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
+                            <div class="flex items-start mb-2">
+                                <img src="../assets/auto/icons/kaiyi finance/Директ.svg"
+                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                                <h3
+                                    class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                                    Лучшие условия автокредитования
+                                </h3>
+                            </div>
+                            <p
+                                class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                                Ставка от 4,9% — это одно из самых выгодных решений на рынке. А низкие платежи каждый
+                                месяц позволяют существенно снизить общие расходы на ваш новый автомобиль.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
+                            <div class="flex items-start mb-2">
+                                <img src="../assets/auto/icons/kaiyi finance/иконка.svg"
+                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                                <h3
+                                    class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                                    Ваш личный эксперт всегда на связи
+                                </h3>
+                            </div>
+                            <p
+                                class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                                Оставьте заявку на интересующую модель и узнайте предварительную стоимость кредита
+                                онлайн. В течение 30 минут наш специалист свяжется с вами и бесплатно проконсультирует
+                                по всем условиям.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-lg p-3 sm:p-4 shadow-[0px_10px_30px_rgba(0,0,0,0.08)] flex flex-col box-border transition-all duration-200 mb-3 sm:mb-5 min-w-0">
+                        <div class="flex items-start mb-2">
+                            <img src="../assets/auto/icons/kaiyi finance/Звезда-real.svg"
+                                class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                            <h3
+                                class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                                Доступное кредитование для каждого
+                            </h3>
+                        </div>
+                        <p
+                            class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                            В нашем автосалоне не нужен первый взнос. Мы предоставляем рассрочку на эту сумму без
+                            переплат, что открывает путь к автомобилю для большинства клиентов.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white  p-3 sm:p-4 md:p-5 rounded-lg  shadow-[0px_10px_30px_rgba(0,0,0,0.08)] mb-3 sm:mb-4">
+                    <h4
+                        class="font-semibold text-[#01101B] text-lg sm:text-xl md:text-2xl leading-relaxed mb-2 min-w-0 break-words hyphens-auto">
+                        Преимущества кредитования в автосалоне "НЕЗАВИСИМОСТЬ"
+                    </h4>
+                    <p
+                        class="text-sm sm:text-[17px] text-gray-600 font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                        Автосалон «НЕЗАВИСИМОСТЬ» предлагает широкий выбор кредитных программ, разработанных под разные
+                        финансовые возможности. Мы сотрудничаем более чем с 20 банками-партнёрами в Москве, что
+                        позволяет выбрать максимально выгодные условия. Благодаря упрощённой системе одобрения
+                        вероятность положительного решения достигает 97%.
+                        Ставка по автокредиту начинается от 4,9% годовых, первые два платежа мы берём на себя. Решение
+                        по заявке можно получить всего за час, оформление проходит по двум документам. Срок кредитования
+                        — до 7 лет, первоначальный взнос — от 0%.
+                        При оформлении автокредита каждый клиент получает дополнительную выгоду — скидку 20% на любой
+                        автомобиль из нашего салона.
+                        Чтобы воспользоваться предложением, достаточно оставить заявку на сайте. Наш менеджер свяжется с
+                        вами в течение 20 минут и подберёт оптимальные условия.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-1 sm:gap-2 mt-3">
+                        <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-sm">
+                            <img src="../assets/loan/Rectangle 92.png" alt="Фото салона 1"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-sm">
+                            <img src="../assets/loan/Rectangle 92.png" alt="Фото салона 2"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-sm">
+                            <img src="../assets/loan/Rectangle 92.png" alt="Фото салона 3"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto space-y-[40px] px-4 sm:px-6 md:px-8 py-10">
+            <h2 class="text-[36px] font-bold text-gray-900">Рекомендации для вас</h2>
+            <div data-component="car-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[36px]">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#152F65] text-white mx-auto px-6 py-12 md:px-10 lg:px-14">
+        <div class="flex flex-col container mx-auto md:flex-row gap-10 items-start justify-between">
+
+            <!-- Левая колонка: информация -->
+            <div class="flex-1 space-y-8">
+
+                <!-- Адрес -->
+                <div>
+                    <div class="flex items-center gap-2 text-sm mb-1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10C21 17 13 21 13 21C13 21 5 17 5 10C5 3 10 1 13 1C16 1 21 3 21 10Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M13 1V3" stroke="currentColor" stroke-width="2" />
+                            <path d="M13 21V23" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        Адрес
+                    </div>
+                    <p class="text-lg font-medium">г. Москва, Береговой проезд, дом 4/6с3</p>
+                </div>
+
+                <!-- График работы -->
+                <div>
+                    <div class="flex items-center gap-2 text-sm mb-1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        График работы
+                    </div>
+                    <p class="text-lg font-medium">Ежедневно с 9:00 до 21:00</p>
+                </div>
+
+                <!-- Контакты -->
+                <div>
+                    <div class="flex items-center gap-2 text-sm mb-1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 15C21 17.2091 19.2091 19 17 19H7C4.79086 19 3 17.2091 3 15V9C3 6.79086 4.79086 5 7 5H17C19.2091 5 21 6.79086 21 9V15Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M16 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M8 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M13 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        Контакты
+                    </div>
+                    <p class="text-lg font-medium">+7 999 999 99 99</p>
+                </div>
+
+                <!-- Кнопка "Обратная связь" -->
+                <button
+                    class="mt-6 bg-white text-[#152F65] font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                    Обратная связь
+                </button>
+            </div>
+
+            <!-- Правая колонка: карта (адаптивная) -->
+            <div class="w-full md:w-[500px] h-auto aspect-video rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A29abbbf054124cc69db31f2ac7c2cdfbb031d022af9fff6b7eb280d67ff71387&amp;source=constructor"
+                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen loading="lazy">
+                </iframe>
+            </div>
+
+        </div>
+
+        <!-- Подвал -->
+        <div class="mt-12 container mx-auto text-xs leading-relaxed text-center md:text-left">
+            Все права защищены<br>
+            ООО Ведьмин дом, вл. 24, корп.3 ОГРН 11769520105554480 ИНН 6950207759
+        </div>
+    </footer>
+
+</body>
+<style>
+    .slider::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #1e40af;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #1e40af;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+</style>
+<script src="https://unpkg.com/imask@7.0.0/dist/imask.min.js"></script>
+<script src="../script/modules/iterations/cars.js"></script>
+<script src="../script/modules/car/showCar.js"></script>
+<script src="../script/modules/car/changeColor.js" type="module"></script>
+<script src="../script/utils/validation.js"></script>
+
+</html>

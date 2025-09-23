@@ -74,15 +74,14 @@
     <main class="container mx-auto px-4 md:px-0 py-6">
 
         <section class="flex flex-col xl:flex-row gap-4 sm:gap-6 p-3 sm:p-6 md:p-8">
-            <!-- Левая колонка: 40% -->
-            <div
-                class="w-full xl:w-[40%] flex-shrink-0 space-y-4 sm:space-y-6 xl:space-y-12 bg-white rounded-xl shadow-lg shadow-[0px_20px_50px_rgba(0,0,0,0.1)] p-4 sm:p-6 xl:p-10">
+            <form id="car-selection"
+                class="w-full xl:w-[40%] h-max flex-shrink-0 space-y-6 sm:space-y-8 xl:space-y-16 bg-white rounded-xl shadow-lg shadow-[0px_20px_50px_rgba(0,0,0,0.1)] p-6 sm:p-8 xl:p-12">
                 <div>
                     <h3
-                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-4 sm:mb-6 min-w-0 break-words hyphens-auto">
+                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
                         1. Выберите автомобиль
                     </h3>
-                    <div class="space-y-4 sm:space-y-5 xl:space-y-8">
+                    <div class="space-y-6 sm:space-y-7 xl:space-y-10">
                         <div class="relative">
                             <select name="car_brand"
                                 class="w-full bg-gray-100 border border-gray-300 rounded-xl px-4 sm:px-6 xl:px-8 py-3 sm:py-5 text-base sm:text-[22px] xl:text-[24px] text-gray-700 focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-blue-300 appearance-none">
@@ -129,14 +128,14 @@
 
                 <div>
                     <h3
-                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-4 sm:mb-6 min-w-0 break-words hyphens-auto">
+                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
                         2. Срок кредитования
                     </h3>
-                    <div class="mb-4 sm:mb-6">
+                    <div class="mb-6 sm:mb-8">
                         <input type="range" id="loanTermSlider" min="1" max="7" step="1" value="3"
                             class="w-full h-2 sm:h-4 bg-gray-300 rounded-xl appearance-none cursor-pointer slider" />
                         <div
-                            class="flex justify-between mt-2 sm:mt-4 text-xs sm:text-[16px] text-[#000F6E] font-medium flex-wrap gap-y-1">
+                            class="flex justify-between mt-4 sm:mt-6 text-xs sm:text-[16px] text-[#000F6E] font-medium flex-wrap gap-y-2">
                             <span>1 год</span><span>2 года</span><span>3 года</span><span>4 года</span><span>5
                                 лет</span><span>6 лет</span><span>7 лет</span>
                         </div>
@@ -145,18 +144,18 @@
 
                 <div>
                     <h3
-                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-4 sm:mb-6 min-w-0 break-words hyphens-auto">
+                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
                         3. Первоначальный взнос
                     </h3>
-                    <div class="mb-4 sm:mb-6">
+                    <div class="mb-6 sm:mb-8">
                         <input type="range" id="initialPaymentSlider" min="10" max="70" step="7" value="20"
                             class="w-full h-2 sm:h-4 bg-gray-300 rounded-xl appearance-none cursor-pointer slider" />
                         <div
-                            class="flex justify-between mt-2 sm:mt-4 text-xs sm:text-[16px] text-[#000F6E] font-medium flex-wrap gap-y-1">
+                            class="flex justify-between mt-4 sm:mt-6 text-xs sm:text-[16px] text-[#000F6E] font-medium flex-wrap gap-y-2">
                             <span>10%</span><span>20%</span><span>30%</span><span>40%</span><span>50%</span><span>60%</span><span>70%</span><span>80%</span><span>90%</span>
                         </div>
                     </div>
-                    <div class="space-y-3 sm:space-y-4">
+                    <div class="space-y-4 sm:space-y-6">
                         <div class="flex justify-between text-sm sm:text-[18px] text-[#000F6E] font-medium">
                             <p class="min-w-0 break-words hyphens-auto">Взнос</p>
                             <p id="initialPaymentAmount" class="min-w-0 break-words hyphens-auto">700 000 ₽</p>
@@ -170,10 +169,10 @@
 
                 <div>
                     <h3
-                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-4 sm:mb-6 min-w-0 break-words hyphens-auto">
+                        class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
                         4. Введите ваши данные
                     </h3>
-                    <div class="space-y-4 sm:space-y-5 xl:space-y-8">
+                    <div class="space-y-6 sm:space-y-7 xl:space-y-10">
                         <div>
                             <input type="text" id="calc-name" name="name" placeholder="ФИО"
                                 class="w-full bg-gray-100 border border-gray-300 rounded-xl px-4 sm:px-6 xl:px-8 py-3 sm:py-5 text-base sm:text-[22px] xl:text-[24px] text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-blue-300 appearance-none" />
@@ -183,9 +182,9 @@
                                 class="w-full bg-gray-100 border border-gray-300 rounded-xl px-4 sm:px-6 xl:px-8 py-3 sm:py-5 text-base sm:text-[22px] xl:text-[24px] text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-blue-300 appearance-none" />
                         </div>
 
-                        <div class="flex items-center space-x-2 sm:space-x-4 mt-2">
-                            <label class="custom-checkbox w-8 h-8">
-                                <input type="checkbox" id="myCheckbox" />
+                        <div class="flex items-center space-x-3 sm:space-x-5 mt-4">
+                            <label class="custom-checkbox w-10 h-8">
+                                <input checked type="checkbox" id="myCheckbox" />
                                 <span class="checkmark">✓</span>
                             </label>
                             <span
@@ -195,36 +194,97 @@
                         </div>
 
                         <p
-                            class="text-xs sm:text-[14px] text-red-600 font-medium mt-1 min-w-0 break-words hyphens-auto">
+                            class="text-xs sm:text-[14px] text-red-600 font-medium mt-2 min-w-0 break-words hyphens-auto">
                             *Кредит предоставляется только гражданам РФ
                         </p>
 
                         <button type="submit"
-                            class="w-full py-3 sm:py-5 xl:py-6 mt-3 bg-gradient-to-r from-[#000F6E] to-[#56E0EA] text-white text-base sm:text-[22px] xl:text-[24px] font-semibold rounded-xl shadow-md sm:shadow-xl transition-all duration-300 hover:from-[#00117A] hover:to-[#4CD6F5] hover:shadow-lg sm:hover:shadow-2xl focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-offset-1 focus:ring-[#56E0EA]">
+                            class="w-full py-4 sm:py-6 xl:py-7 mt-4 bg-gradient-to-r from-[#000F6E] to-[#56E0EA] text-white text-base sm:text-[22px] xl:text-[24px] font-semibold rounded-xl shadow-md sm:shadow-xl transition-all duration-300 hover:from-[#00117A] hover:to-[#4CD6F5] hover:shadow-lg sm:hover:shadow-2xl focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-offset-1 focus:ring-[#56E0EA]">
                             Отправить заявку
                         </button>
                     </div>
                 </div>
-            </div>
+            </form>
 
-            <!-- Правая колонка: 60% -->
             <div class="w-full xl:w-[60%] flex flex-col px-2 sm:px-4 md:px-6 xl:px-0 mt-6 xl:mt-0">
 
-                <!-- Основное изображение авто -->
-                <div class="mb-3 sm:mb-4">
-                    <img src="../assets/auto/Rectangle 218.png" alt="Kaiyi X3 Pro"
-                        class="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 xl:max-h-[30rem] object-contain mx-auto rounded-lg shadow-sm" />
+                <div class="mb-3 sm:mb-4 ">
+                    <img id="mock" src="../assets/auto/Rectangle 218.png" alt="Kaiyi X3 Pro"
+                        class="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96  xl:max-h-[30rem] object-contain mx-auto  rounded-lg  shadow-sm" />
+                    <div id="selected-car"
+                        class=" rounded-xl  p-5 sm:p-6 md:p-8  xl:p-10 bg-white hidden shadow-lg shadow-[0px_10px_30px_rgba(0,0,0,0.08)]">
+                        <div class="flex flex-col md:flex-row md:items-start gap-6 mb-6">
+                            <div class="flex-1">
+                                <h2 id="car-title" class="text-2xl sm:text-3xl font-bold text-[#01101B]">Выберите автомобиль</h2>
+                                <p class="text-sm sm:text-base text-gray-700 mt-1">Внедорожник</p>
+                                <p class="text-lg sm:text-xl font-semibold text-[#000F6E] mt-2">от 1 149 000 руб</p>
+                                <div class="hidden md:block mt-4">
+                                    <div data-color-container class="flex flex-wrap gap-3">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="md:w-1/2 flex justify-center md:justify-end">
+                                <img data-image src="../assets/auto/Rectangle 18.png" alt="Kaiyi X3 Pro"
+                                    class="max-w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 xl:max-h-[30rem] object-contain rounded-lg" />
+                            </div>
+
+                            <div class=" md:hidden mt-4">
+                                <div data-color-container class="flex flex-wrap gap-3">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Мощность 100 л.с</span>
+                                <img src="../assets/auto/icons/Vector.svg" alt="">
+
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Разгон до 100км/ч 12.6
+                                    сек.</span>
+                                <img src="../assets/auto/icons/dashboard-speed-01.svg" alt="">
+
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Макс. cкорость 175
+                                    км/ч</span>
+                                <img src="../assets/auto/icons/c------- 1.svg" alt="">
+
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Расход 5.9 л/100 км</span>
+                                <img src="../assets/auto/icons/Group.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 mt-8 max-w-4xl mx-auto w-full">
+                            <div class="rounded-lg overflow-hidden bg-white shadow-sm">
+                                <img src="../assets/auto/moreCarImages/Trade-in.png" alt="Trade-in"
+                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden bg-white shadow-sm">
+                                <img src="../assets/auto/moreCarImages/Прямая скидка-1.png" alt="Прямая скидка 1"
+                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden bg-white shadow-sm">
+                                <img src="../assets/auto/moreCarImages/Прямая скидка.png" alt="Прямая скидка"
+                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Блок: Почему выгодно -->
                 <div class="w-full mx-auto py-3 sm:py-5">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-5">
-                        <!-- Карточка 1 -->
                         <div
-                            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200  min-w-0">
+                            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
                             <div class="flex items-start mb-2">
                                 <img src="../assets/auto/icons/kaiyi finance/Директ.svg"
-                                    class="w-10 sm:w-[66px] mr-2 flex-shrink-0" alt="Иконка" />
+                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
                                 <h3
                                     class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
                                     Лучшие условия автокредитования
@@ -237,12 +297,11 @@
                             </p>
                         </div>
 
-                        <!-- Карточка 2 -->
                         <div
-                            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200  min-w-0">
+                            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
                             <div class="flex items-start mb-2">
-                                <img src="../assets/auto/icons/kaiyi finance/Директ.svg"
-                                    class="w-10 sm:w-[66px] mr-2 flex-shrink-0" alt="Иконка" />
+                                <img src="../assets/auto/icons/kaiyi finance/иконка.svg"
+                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
                                 <h3
                                     class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
                                     Ваш личный эксперт всегда на связи
@@ -257,12 +316,11 @@
                         </div>
                     </div>
 
-                    <!-- Карточка 3 -->
                     <div
-                        class="bg-white rounded-lg p-3 sm:p-4 shadow-[0px_10px_30px_rgba(0,0,0,0.08)] flex flex-col box-border transition-all duration-200  mb-3 sm:mb-5 min-w-0">
+                        class="bg-white rounded-lg p-3 sm:p-4 shadow-[0px_10px_30px_rgba(0,0,0,0.08)] flex flex-col box-border transition-all duration-200 mb-3 sm:mb-5 min-w-0">
                         <div class="flex items-start mb-2">
-                            <img src="../assets/auto/icons/kaiyi finance/Директ.svg"
-                                class="w-10 sm:w-[66px] mr-2 flex-shrink-0" alt="Иконка" />
+                            <img src="../assets/auto/icons/kaiyi finance/Звезда-real.svg"
+                                class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
                             <h3
                                 class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
                                 Доступное кредитование для каждого
@@ -276,7 +334,6 @@
                     </div>
                 </div>
 
-                <!-- Описание автосалона -->
                 <div
                     class="bg-white  p-3 sm:p-4 md:p-5 rounded-lg  shadow-[0px_10px_30px_rgba(0,0,0,0.08)] mb-3 sm:mb-4">
                     <h4
@@ -298,7 +355,6 @@
                         вами в течение 20 минут и подберёт оптимальные условия.
                     </p>
 
-                    <!-- Фото салона -->
                     <div class="grid grid-cols-3 gap-1 sm:gap-2 mt-3">
                         <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-sm">
                             <img src="../assets/loan/Rectangle 92.png" alt="Фото салона 1"
@@ -320,7 +376,6 @@
         <section class="container mx-auto space-y-[40px] px-4 sm:px-6 md:px-8 py-10">
             <h2 class="text-[36px] font-bold text-gray-900">Рекомендации для вас</h2>
             <div data-component="car-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[36px]">
-                <!-- Сюда будут подгружаться карточки автомобилей через JS -->
             </div>
         </section>
 
@@ -397,7 +452,32 @@
             ООО Ведьмин дом, вл. 24, корп.3 ОГРН 11769520105554480 ИНН 6950207759
         </div>
     </footer>
+<!-- Контейнер галереи -->
+<div data-gallery-container>
+    <!-- Миниатюры -->
+    <div class="grid grid-cols-3 gap-2 mb-4">
+        <img data-gallery-image data-src="../assets/loan/Rectangle 92.png" src="../assets/loan/Rectangle 92.png" alt="Фото 1" class="cursor-pointer rounded" />
+        <img data-gallery-image data-src="../assets/loan/Rectangle 92.png" src="../assets/loan/Rectangle 92.png" alt="Фото 2" class="cursor-pointer rounded" />
+        <img data-gallery-image data-src="../assets/loan/Rectangle 92.png" src="../assets/loan/Rectangle 92.png" alt="Фото 3" class="cursor-pointer rounded" />
+    </div>
 
+    <!-- Модальное окно -->
+    <div data-photo-modal class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300">
+        <button data-modal-close class="absolute top-4 right-4 text-white text-3xl z-10">×</button>
+        
+        <button data-modal-prev class="absolute left-4 text-white text-4xl z-10">‹</button>
+        <button data-modal-next class="absolute right-4 text-white text-4xl z-10">›</button>
+
+        <img data-modal-image class="max-w-full max-h-[90vh] object-contain rounded shadow-lg" />
+    </div>
+</div>
+
+<style>
+    [data-photo-modal].show {
+        display: flex;
+        opacity: 1;
+    }
+</style>
 </body>
 <style>
     .slider::-webkit-slider-thumb {
@@ -419,8 +499,11 @@
         border: 2px solid white;
     }
 </style>
-
+<script src="https://unpkg.com/imask@7.0.0/dist/imask.min.js"></script>
 <script src="../script/modules/iterations/cars.js"></script>
-
+<script src="../script/modules/car/showCar.js"></script>
+<script src="../script/modules/car/changeColor.js" type="module"></script>
+<script src="../script/utils/validation.js"></script>
+<script src="../script/components/modals/showPhotoModal.js"></script>
 
 </html>
