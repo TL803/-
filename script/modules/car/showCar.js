@@ -1,12 +1,19 @@
 class CarSetupManager {
-    constructor(formId, mockId, selectedCarId) {
-        this.form = document.getElementById(formId);
-        this.mockElement = document.getElementById(mockId);
-        this.selectedCarElement = document.getElementById(selectedCarId);
-        this.carTitleElement = document.getElementById('car-title'); // 👈 новое
-
+    constructor(formSelector, mockSelector, selectedCarSelector) {
+        this.form = document.querySelector(formSelector);
         if (!this.form) {
-            console.error(`Форма с id "${formId}" не найдена`);
+            console.error(`Форма по селектору "${formSelector}" не найдена`);
+            return;
+        }
+
+        const container = this.form.parentElement;
+        
+        this.mockElements = container.querySelectorAll(mockSelector);
+        this.selectedCarElements = container.querySelectorAll(selectedCarSelector);
+        this.carTitleElements = container.querySelectorAll('[data-car-title]');
+
+        if (this.mockElements.length === 0 || this.selectedCarElements.length === 0) {
+            console.error('Не найдены элементы [data-mock] или [data-selected-car] в контейнере формы', container);
             return;
         }
 
@@ -15,7 +22,7 @@ class CarSetupManager {
         this.complectationSelect = this.form.querySelector('select[name="complectation"]');
 
         if (!this.brandSelect || !this.modelSelect || !this.complectationSelect) {
-            console.error('Не все селекты найдены');
+            console.error('Не все селекты найдены в форме');
             return;
         }
 
@@ -31,12 +38,10 @@ class CarSetupManager {
         this.complectationSelect.addEventListener('change', () => this.updateSelectsState());
 
         this.updateSelectsState();
-
-        console.log('Инициализация селектов завершена');
+        console.log('Инициализация CarSetupManager завершена');
     }
 
     updateSelectsState() {
-        // Обновляем состояние зависимостей
         this.modelSelect.disabled = !this.brandSelect.value;
         if (!this.brandSelect.value) {
             this.modelSelect.value = '';
@@ -47,7 +52,7 @@ class CarSetupManager {
             this.complectationSelect.value = '';
         }
 
-        this.updateCarTitle(); 
+        this.updateCarTitle();
 
         const isAllSelected = this.brandSelect.value && this.modelSelect.value && this.complectationSelect.value;
 
@@ -59,7 +64,7 @@ class CarSetupManager {
     }
 
     updateCarTitle() {
-        if (!this.carTitleElement) return;
+        if (this.carTitleElements.length === 0) return;
 
         const brand = this.brandSelect.value || '';
         const model = this.modelSelect.value || '';
@@ -75,20 +80,38 @@ class CarSetupManager {
             title = brand;
         }
 
-        this.carTitleElement.textContent = title;
+        this.carTitleElements.forEach(element => {
+            element.textContent = title;
+        });
     }
 
     showCar() {
-        this.mockElement.classList.add('hidden');
-        this.selectedCarElement.classList.remove('hidden');
+        this.mockElements.forEach(element => {
+            element.classList.add('hidden');
+        });
+        
+        this.selectedCarElements.forEach(element => {
+            element.classList.remove('hidden');
+        });
     }
 
     hideCar() {
-        this.mockElement.classList.remove('hidden');
-        this.selectedCarElement.classList.add('hidden');
+        this.mockElements.forEach(element => {
+            element.classList.remove('hidden');
+        });
+        
+        this.selectedCarElements.forEach(element => {
+            element.classList.add('hidden');
+        });
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new CarSetupManager('car-selection', 'mock', 'selected-car');
+    const forms = document.querySelectorAll('[data-car-form]');
+    forms.forEach(form => {
+        const tempId = 'form-' + Math.random().toString(36).substr(2, 9);
+        form.setAttribute('data-temp-id', tempId);
+        new CarSetupManager(`[data-temp-id="${tempId}"]`, '[data-mock]', '[data-selected-car]');
+        form.removeAttribute('data-temp-id');
+    });
 });

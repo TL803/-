@@ -57,7 +57,6 @@ function initColorPicker(containerElement, imageElement) {
         return;
     }
 
-    // Определяем, находимся ли мы на auto.html или taxiauto.html
     const isLargePage = ['/auto.html', '/taxiauto.html'].some(page => 
         window.location.pathname.endsWith(page)
     );
@@ -75,12 +74,10 @@ function initColorPicker(containerElement, imageElement) {
         colorButton.addEventListener('click', () => {
             imageElement.src = colorObj.car;
 
-            // Снимаем выделение со всех кнопок в этом контейнере
             containerElement.querySelectorAll('button').forEach(btn => {
                 btn.classList.remove('ring-2', 'ring-offset-2', 'ring-black');
             });
 
-            // Добавляем выделение на выбранную
             colorButton.classList.add('ring-2', 'ring-offset-2', 'ring-black');
         });
 
@@ -96,15 +93,37 @@ function initColorPicker(containerElement, imageElement) {
     }
 }
 
-// 👇 Инициализация: находим ВСЕ пары [контейнер + картинка] и применяем к каждой
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-color-container]').forEach(container => {
-        const image = container.closest('[data-color-wrapper]')?.querySelector('[data-image]') 
-                   || container.nextElementSibling?.matches('[data-image]') && container.nextElementSibling
-                   || container.previousElementSibling?.matches('[data-image]') && container.previousElementSibling
-                   || document.querySelector('[data-image]'); // fallback (не идеально)
+    const colorContainers = document.querySelectorAll('[data-color-container]');
+    
+    colorContainers.forEach(container => {
+        let image = null;
+        
+        const parentBlock = container.closest('div');
+        if (parentBlock) {
+            image = parentBlock.querySelector('[data-image]');
+        }
+        
+        if (!image && container.parentElement) {
+            image = container.parentElement.querySelector('[data-image]');
+        }
+        
+        if (!image) {
+            const carBlock = container.closest('[data-selected-car]');
+            if (carBlock) {
+                image = carBlock.querySelector('[data-image]');
+            }
+        }
+        
+        if (!image) {
+            const allImages = document.querySelectorAll('[data-image]');
+            if (allImages.length > 0) {
+                image = allImages[0]; 
+            }
+        }
 
         if (image) {
+            console.log('Найдено изображение для контейнера:', image);
             initColorPicker(container, image);
         } else {
             console.warn('Не найдена картинка, связанная с контейнером цветов:', container);

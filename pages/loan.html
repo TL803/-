@@ -74,9 +74,66 @@
     <main class="container mx-auto px-4 md:px-0 py-6">
 
         <section class="flex flex-col xl:flex-row gap-4 sm:gap-6 p-3 sm:p-6 md:p-8">
-            <form id="car-selection"
+            <form data-car-form 
                 class="w-full xl:w-[40%] h-max flex-shrink-0 space-y-6 sm:space-y-8 xl:space-y-16 bg-white rounded-xl shadow-lg shadow-[0px_20px_50px_rgba(0,0,0,0.1)] p-6 sm:p-8 xl:p-12">
                 <div>
+                    <div class="w-full mx-auto py-3 sm:py-5 block xl:hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-5">
+                            <div
+                                class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
+                                <div class="flex items-start mb-2">
+                                    <img src="../assets/auto/icons/kaiyi finance/Директ.svg"
+                                        class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                                    <h3
+                                        class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                                        Лучшие условия автокредитования
+                                    </h3>
+                                </div>
+                                <p
+                                    class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                                    Ставка от 4,9% — это одно из самых выгодных решений на рынке. А низкие платежи
+                                    каждый
+                                    месяц позволяют существенно снизить общие расходы на ваш новый автомобиль.
+                                </p>
+                            </div>
+
+                            <div
+                                class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
+                                <div class="flex items-start mb-2">
+                                    <img src="../assets/auto/icons/kaiyi finance/иконка.svg"
+                                        class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                                    <h3
+                                        class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                                        Ваш личный эксперт всегда на связи
+                                    </h3>
+                                </div>
+                                <p
+                                    class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                                    Оставьте заявку на интересующую модель и узнайте предварительную стоимость кредита
+                                    онлайн. В течение 30 минут наш специалист свяжется с вами и бесплатно
+                                    проконсультирует
+                                    по всем условиям.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white rounded-lg p-3 sm:p-4 shadow-[0px_10px_30px_rgba(0,0,0,0.08)] flex flex-col box-border transition-all duration-200 mb-3 sm:mb-5 min-w-0">
+                            <div class="flex items-start mb-2">
+                                <img src="../assets/auto/icons/kaiyi finance/Звезда-real.svg"
+                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                                <h3
+                                    class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                                    Доступное кредитование для каждого
+                                </h3>
+                            </div>
+                            <p
+                                class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                                В нашем автосалоне не нужен первый взнос. Мы предоставляем рассрочку на эту сумму без
+                                переплат, что открывает путь к автомобилю для большинства клиентов.
+                            </p>
+                        </div>
+                    </div>
                     <h3
                         class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
                         1. Выберите автомобиль
@@ -122,6 +179,72 @@
                                     d="M19 9l-7 7-7-7">
                                 </path>
                             </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 sm:mb-4 xl:hidden">
+                    <img data-mock src="../assets/auto/Rectangle 218.png" alt="Kaiyi X3 Pro"
+                        class="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 xl:max-h-[30rem] object-contain mx-auto rounded-lg shadow-sm" />
+
+                    <div data-selected-car
+                        class="rounded-xl p-5 sm:p-6 md:p-8 xl:p-10 bg-white hidden">
+
+                        <div class="flex flex-col md:flex-row md:items-start gap-6 mb-6">
+                            <div class="flex-1">
+                                <h2 data-car-title class="text-2xl sm:text-3xl font-bold text-[#01101B]">Выберите
+                                    автомобиль</h2>
+                                <p class="text-sm sm:text-base text-gray-700 mt-1">Внедорожник</p>
+                                <p class="text-lg sm:text-xl font-semibold text-[#000F6E] mt-2">от 1 149 000 руб</p>
+                                <div class="hidden md:block mt-4">
+                                    <div data-color-container class="flex flex-wrap gap-3"></div>
+                                </div>
+                            </div>
+
+                            <div class="md:w-1/2 flex justify-center md:justify-end">
+                                <img data-image src="../assets/auto/Rectangle 18.png" alt="Kaiyi X3 Pro"
+                                    class="max-w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 xl:max-h-[30rem] object-contain rounded-lg" />
+                            </div>
+
+                            <div class="md:hidden mt-4">
+                                <div data-color-container class="flex flex-wrap gap-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Мощность 100 л.с</span>
+                                <img src="../assets/auto/icons/Vector.svg" alt="">
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Разгон до 100км/ч 12.6
+                                    сек.</span>
+                                <img src="../assets/auto/icons/dashboard-speed-01.svg" alt="">
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Макс. cкорость 175
+                                    км/ч</span>
+                                <img src="../assets/auto/icons/c------- 1.svg" alt="">
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <span class="text-sm sm:text-base text-gray-800 font-medium">Расход 5.9 л/100 км</span>
+                                <img src="../assets/auto/icons/Group.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 mt-8 max-w-4xl mx-auto w-full">
+                            <div class="rounded-lg overflow-hidden bg-white shadow-sm">
+                                <img src="../assets/auto/moreCarImages/Trade-in.png" alt="Trade-in"
+                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden bg-white shadow-sm">
+                                <img src="../assets/auto/moreCarImages/Прямая скидка-1.png" alt="Прямая скидка 1"
+                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                            </div>
+                            <div class="rounded-lg overflow-hidden bg-white shadow-sm">
+                                <img src="../assets/auto/moreCarImages/Прямая скидка.png" alt="Прямая скидка"
+                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -208,20 +331,21 @@
 
             <div class="w-full xl:w-[60%] flex flex-col px-2 sm:px-4 md:px-6 xl:px-0 mt-6 xl:mt-0">
 
-                <div class="mb-3 sm:mb-4 ">
-                    <img id="mock" src="../assets/auto/Rectangle 218.png" alt="Kaiyi X3 Pro"
-                        class="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96  xl:max-h-[30rem] object-contain mx-auto  rounded-lg  shadow-sm" />
-                    <div id="selected-car"
-                        class=" rounded-xl  p-5 sm:p-6 md:p-8  xl:p-10 bg-white hidden shadow-lg shadow-[0px_10px_30px_rgba(0,0,0,0.08)]">
+                <div class="mb-3 sm:mb-4 hidden xl:block">
+                    <img data-mock src="../assets/auto/Rectangle 218.png" alt="Kaiyi X3 Pro"
+                        class="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 xl:max-h-[30rem] object-contain mx-auto rounded-lg shadow-sm" />
+
+                    <div data-selected-car
+                        class="rounded-xl p-5 sm:p-6 md:p-8 xl:p-10 bg-white hidden shadow-lg shadow-[0px_10px_30px_rgba(0,0,0,0.08)]">
+
                         <div class="flex flex-col md:flex-row md:items-start gap-6 mb-6">
                             <div class="flex-1">
-                                <h2 id="car-title" class="text-2xl sm:text-3xl font-bold text-[#01101B]">Выберите автомобиль</h2>
+                                <h2 data-car-title class="text-2xl sm:text-3xl font-bold text-[#01101B]">Выберите
+                                    автомобиль</h2>
                                 <p class="text-sm sm:text-base text-gray-700 mt-1">Внедорожник</p>
                                 <p class="text-lg sm:text-xl font-semibold text-[#000F6E] mt-2">от 1 149 000 руб</p>
                                 <div class="hidden md:block mt-4">
-                                    <div data-color-container class="flex flex-wrap gap-3">
-
-                                    </div>
+                                    <div data-color-container class="flex flex-wrap gap-3"></div>
                                 </div>
                             </div>
 
@@ -230,10 +354,8 @@
                                     class="max-w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 xl:max-h-[30rem] object-contain rounded-lg" />
                             </div>
 
-                            <div class=" md:hidden mt-4">
-                                <div data-color-container class="flex flex-wrap gap-3">
-
-                                </div>
+                            <div class="md:hidden mt-4">
+                                <div data-color-container class="flex flex-wrap gap-3"></div>
                             </div>
                         </div>
 
@@ -241,19 +363,16 @@
                             <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                 <span class="text-sm sm:text-base text-gray-800 font-medium">Мощность 100 л.с</span>
                                 <img src="../assets/auto/icons/Vector.svg" alt="">
-
                             </div>
                             <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                 <span class="text-sm sm:text-base text-gray-800 font-medium">Разгон до 100км/ч 12.6
                                     сек.</span>
                                 <img src="../assets/auto/icons/dashboard-speed-01.svg" alt="">
-
                             </div>
                             <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                 <span class="text-sm sm:text-base text-gray-800 font-medium">Макс. cкорость 175
                                     км/ч</span>
                                 <img src="../assets/auto/icons/c------- 1.svg" alt="">
-
                             </div>
                             <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                 <span class="text-sm sm:text-base text-gray-800 font-medium">Расход 5.9 л/100 км</span>
@@ -278,7 +397,7 @@
                     </div>
                 </div>
 
-                <div class="w-full mx-auto py-3 sm:py-5">
+                <div class="w-full mx-auto py-3 sm:py-5 hidden xl:block">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-5">
                         <div
                             class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
@@ -452,32 +571,15 @@
             ООО Ведьмин дом, вл. 24, корп.3 ОГРН 11769520105554480 ИНН 6950207759
         </div>
     </footer>
-<!-- Контейнер галереи -->
-<div data-gallery-container>
-    <!-- Миниатюры -->
-    <div class="grid grid-cols-3 gap-2 mb-4">
-        <img data-gallery-image data-src="../assets/loan/Rectangle 92.png" src="../assets/loan/Rectangle 92.png" alt="Фото 1" class="cursor-pointer rounded" />
-        <img data-gallery-image data-src="../assets/loan/Rectangle 92.png" src="../assets/loan/Rectangle 92.png" alt="Фото 2" class="cursor-pointer rounded" />
-        <img data-gallery-image data-src="../assets/loan/Rectangle 92.png" src="../assets/loan/Rectangle 92.png" alt="Фото 3" class="cursor-pointer rounded" />
-    </div>
+    <!-- Контейнер галереи -->
 
-    <!-- Модальное окно -->
-    <div data-photo-modal class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300">
-        <button data-modal-close class="absolute top-4 right-4 text-white text-3xl z-10">×</button>
-        
-        <button data-modal-prev class="absolute left-4 text-white text-4xl z-10">‹</button>
-        <button data-modal-next class="absolute right-4 text-white text-4xl z-10">›</button>
 
-        <img data-modal-image class="max-w-full max-h-[90vh] object-contain rounded shadow-lg" />
-    </div>
-</div>
-
-<style>
-    [data-photo-modal].show {
-        display: flex;
-        opacity: 1;
-    }
-</style>
+    <style>
+        [data-photo-modal].show {
+            display: flex;
+            opacity: 1;
+        }
+    </style>
 </body>
 <style>
     .slider::-webkit-slider-thumb {
@@ -504,6 +606,6 @@
 <script src="../script/modules/car/showCar.js"></script>
 <script src="../script/modules/car/changeColor.js" type="module"></script>
 <script src="../script/utils/validation.js"></script>
-<script src="../script/components/modals/showPhotoModal.js"></script>
+<!-- <script src="../script/components/modals/showPhotoModal.js"></script> -->
 
 </html>
