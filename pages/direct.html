@@ -74,66 +74,59 @@
     <main class="container mx-auto px-4 md:px-0 py-6">
 
         <section class="flex flex-col xl:flex-row gap-4 sm:gap-6 p-3 sm:p-6 md:p-8">
-            <form data-car-form 
-                class="w-full xl:w-[40%] h-max flex-shrink-0 space-y-6 sm:space-y-8 xl:space-y-16 bg-white rounded-xl shadow-lg shadow-[0px_20px_50px_rgba(0,0,0,0.1)] p-6 sm:p-8 xl:p-12">
-                <div>
-                    <div class="w-full mx-auto py-3 sm:py-5 block xl:hidden">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-5">
-                            <div
-                                class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
-                                <div class="flex items-start mb-2">
-                                    <img src="../assets/auto/icons/kaiyi finance/Директ.svg"
-                                        class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
-                                    <h3
-                                        class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
-                                        Лучшие условия автокредитования
-                                    </h3>
-                                </div>
-                                <p
-                                    class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
-                                    Ставка от 4,9% — это одно из самых выгодных решений на рынке. А низкие платежи
-                                    каждый
-                                    месяц позволяют существенно снизить общие расходы на ваш новый автомобиль.
-                                </p>
-                            </div>
-
-                            <div
-                                class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
-                                <div class="flex items-start mb-2">
-                                    <img src="../assets/auto/icons/kaiyi finance/иконка.svg"
-                                        class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
-                                    <h3
-                                        class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
-                                        Ваш личный эксперт всегда на связи
-                                    </h3>
-                                </div>
-                                <p
-                                    class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
-                                    Оставьте заявку на интересующую модель и узнайте предварительную стоимость кредита
-                                    онлайн. В течение 30 минут наш специалист свяжется с вами и бесплатно
-                                    проконсультирует
-                                    по всем условиям.
-                                </p>
-                            </div>
-                        </div>
-
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-3 xl:hidden  sm:mb-5">
+                <!-- Карточка 1: Что такое директ? -->
+                <div
+                    class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
+                    <div class="flex items-start mb-2">
+                        <!-- Иконка в синем квадрате -->
                         <div
-                            class="bg-white rounded-lg p-3 sm:p-4 shadow-[0px_10px_30px_rgba(0,0,0,0.08)] flex flex-col box-border transition-all duration-200 mb-3 sm:mb-5 min-w-0">
-                            <div class="flex items-start mb-2">
-                                <img src="../assets/auto/icons/kaiyi finance/Звезда-real.svg"
-                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
-                                <h3
-                                    class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
-                                    Доступное кредитование для каждого
-                                </h3>
-                            </div>
-                            <p
-                                class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
-                                В нашем автосалоне не нужен первый взнос. Мы предоставляем рассрочку на эту сумму без
-                                переплат, что открывает путь к автомобилю для большинства клиентов.
-                            </p>
+                            class="bg-blue-600 w-12 h-12 rounded-md flex items-center justify-center mr-3 flex-shrink-0">
+                            <img src="../assets/auto/icons/kaiyi finance/Директ (6).svg" alt="">
                         </div>
+                        <h3
+                            class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                            Что такое директ?
+                        </h3>
                     </div>
+                    <p
+                        class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                        Автокредит по программе «Директ» — это возможность приобрести новый автомобиль уже
+                        сегодня с минимальной ставкой от 0,01% годовых. Благодаря поддержке автопроизводителей
+                        программа предлагает условия, которые не зависят от базовых ставок банков, что делает
+                        покупку особенно выгодной.
+                    </p>
+                </div>
+
+                <!-- Карточка 2: Необходимые условия, документы -->
+                <div
+                    class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
+                    <div class="flex items-start mb-2">
+                        <!-- Иконка в синем квадрате -->
+                        <div
+                            class="bg-blue-600 w-12 h-12 rounded-md flex items-center justify-center mr-3 flex-shrink-0">
+                            <img src="../assets/auto/icons/kaiyi finance/Условия.svg" alt="">
+
+                        </div>
+                        <h3
+                            class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                            Необходимые условия, документы
+                        </h3>
+                    </div>
+                    <ul
+                        class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose list-disc pl-5 space-y-1">
+                        <li>Наличие гражданства Российской Федерации</li>
+                        <li>Возраст заемщика — от 23 лет на момент получения кредита до 70 лет</li>
+                        <li>Официальное трудоустройство на территории РФ</li>
+                        <li>Постоянная прописка и фактическое проживание в регионе присутствия банка</li>
+                    </ul>
+                </div>
+            </div>
+            <form data-car-form
+                class="w-full xl:w-[40%] h-max flex-shrink-0 space-y-6 sm:space-y-8 xl:space-y-16 bg-white rounded-xl shadow-lg shadow-[0px_20px_50px_rgba(0,0,0,0.1)] p-6 sm:p-8 xl:p-12">
+
+
+                <div>
                     <h3
                         class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
                         1. Выберите автомобиль
@@ -187,8 +180,7 @@
                     <img data-mock src="../assets/auto/Rectangle 218.png" alt="Kaiyi X3 Pro"
                         class="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 xl:max-h-[30rem] object-contain mx-auto rounded-lg shadow-sm" />
 
-                    <div data-selected-car
-                        class="rounded-xl p-5 sm:p-6 md:p-8 xl:p-10 bg-white hidden">
+                    <div data-selected-car class="rounded-xl p-5 sm:p-6 md:p-8 xl:p-10 bg-white hidden">
 
                         <div class="flex flex-col md:flex-row md:items-start gap-6 mb-6">
                             <div class="flex-1">
@@ -399,57 +391,52 @@
 
                 <div class="w-full mx-auto py-3 sm:py-5 hidden xl:block">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-5">
+                        <!-- Карточка 1: Что такое директ? -->
                         <div
                             class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
                             <div class="flex items-start mb-2">
-                                <img src="../assets/auto/icons/kaiyi finance/Директ.svg"
-                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                                <!-- Иконка в синем квадрате -->
+                                <div
+                                    class="bg-blue-600 w-12 h-12 rounded-md flex items-center justify-center mr-3 flex-shrink-0">
+                                    <img src="../assets/auto/icons/kaiyi finance/Директ (6).svg" alt="">
+                                </div>
                                 <h3
                                     class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
-                                    Лучшие условия автокредитования
+                                    Что такое директ?
                                 </h3>
                             </div>
                             <p
                                 class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
-                                Ставка от 4,9% — это одно из самых выгодных решений на рынке. А низкие платежи каждый
-                                месяц позволяют существенно снизить общие расходы на ваш новый автомобиль.
+                                Автокредит по программе «Директ» — это возможность приобрести новый автомобиль уже
+                                сегодня с минимальной ставкой от 0,01% годовых. Благодаря поддержке автопроизводителей
+                                программа предлагает условия, которые не зависят от базовых ставок банков, что делает
+                                покупку особенно выгодной.
                             </p>
                         </div>
 
+                        <!-- Карточка 2: Необходимые условия, документы -->
                         <div
                             class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
                             <div class="flex items-start mb-2">
-                                <img src="../assets/auto/icons/kaiyi finance/иконка.svg"
-                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                                <!-- Иконка в синем квадрате -->
+                                <div
+                                    class="bg-blue-600 w-12 h-12 rounded-md flex items-center justify-center mr-3 flex-shrink-0">
+                                    <img src="../assets/auto/icons/kaiyi finance/Условия.svg" alt="">
+
+                                </div>
                                 <h3
                                     class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
-                                    Ваш личный эксперт всегда на связи
+                                    Необходимые условия, документы
                                 </h3>
                             </div>
-                            <p
-                                class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
-                                Оставьте заявку на интересующую модель и узнайте предварительную стоимость кредита
-                                онлайн. В течение 30 минут наш специалист свяжется с вами и бесплатно проконсультирует
-                                по всем условиям.
-                            </p>
+                            <ul
+                                class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose list-disc pl-5 space-y-1">
+                                <li>Наличие гражданства Российской Федерации</li>
+                                <li>Возраст заемщика — от 23 лет на момент получения кредита до 70 лет</li>
+                                <li>Официальное трудоустройство на территории РФ</li>
+                                <li>Постоянная прописка и фактическое проживание в регионе присутствия банка</li>
+                            </ul>
                         </div>
-                    </div>
-
-                    <div
-                        class="bg-white rounded-lg p-3 sm:p-4 shadow-[0px_10px_30px_rgba(0,0,0,0.08)] flex flex-col box-border transition-all duration-200 mb-3 sm:mb-5 min-w-0">
-                        <div class="flex items-start mb-2">
-                            <img src="../assets/auto/icons/kaiyi finance/Звезда-real.svg"
-                                class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
-                            <h3
-                                class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
-                                Доступное кредитование для каждого
-                            </h3>
-                        </div>
-                        <p
-                            class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
-                            В нашем автосалоне не нужен первый взнос. Мы предоставляем рассрочку на эту сумму без
-                            переплат, что открывает путь к автомобилю для большинства клиентов.
-                        </p>
                     </div>
                 </div>
 
