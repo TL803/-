@@ -234,7 +234,7 @@
         </section>
 
         <section class="mt-[50px] ">
-            <div data-cars="clients" class="px-4 py-6 mx-auto max-w-7xl">
+            <div data-cars="clients" class="px-4 py-6 mx-auto">
 
             </div>
         </section>
@@ -372,82 +372,87 @@
         </section>
 
 
-<section class="py-8 px-4 mx-auto ">
-  <h2 class="text-3xl font-bold text-[#01101B] mb-10">Рассчитать кредит</h2>
+        <section class="py-8 px-4 mx-auto ">
+            <h2 class="text-3xl font-bold text-[#01101B] mb-10">Рассчитать кредит</h2>
 
-  <div class="bg-gray-100 rounded-xl p-8 shadow-sm">
+            <div class="bg-gray-100 rounded-xl p-8 shadow-sm">
 
-    <!-- Мобильная версия -->
-    <div class="md:hidden space-y-6">
-      <div>
-        <label for="car-price-mobile" class="block text-sm font-medium text-gray-700 mb-2">Стоимость автомобиля</label>
-        <input type="number" id="car-price-mobile" value="2000000" min="0" step="10000"
-          class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
-      </div>
+                <!-- Мобильная версия -->
+                <div class="md:hidden space-y-6">
+                    <div>
+                        <label for="car-price-mobile" class="block text-sm font-medium text-gray-700 mb-2">Стоимость
+                            автомобиля</label>
+                        <input type="number" id="car-price-mobile" value="2000000" min="0" step="10000"
+                            class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
+                    </div>
 
-      <div>
-        <label for="down-payment-mobile" class="block text-sm font-medium text-gray-700 mb-2">Первоначальный взнос</label>
-        <input type="number" id="down-payment-mobile" value="1000000" min="0" step="1000"
-          class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
-      </div>
+                    <div>
+                        <label for="down-payment-mobile"
+                            class="block text-sm font-medium text-gray-700 mb-2">Первоначальный взнос</label>
+                        <input type="number" id="down-payment-mobile" value="1000000" min="0" step="1000"
+                            class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
+                    </div>
 
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-2">Срок кредитования</label>
-        <!-- ИСПРАВЛЕНО: max="8" вместо 7 -->
-        <input type="range" min="1" max="8" value="5"
-          class="credit-slider w-full rounded-full cursor-pointer" />
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Срок кредитования</label>
+                        <!-- ИСПРАВЛЕНО: max="8" вместо 7 -->
+                        <input type="range" min="1" max="8" value="5"
+                            class="credit-slider w-full rounded-full cursor-pointer" />
 
-        <div class="mt-2 flex justify-between text-xs text-gray-700">
-          <span class="text-center">1<br>год</span>
-          <span class="text-center">2<br>года</span>
-          <span class="text-center">3<br>года</span>
-          <span class="text-center">4<br>года</span>
-          <span class="text-center">5<br>лет</span> <!-- исправлено: "лет", а не "года" -->
-          <span class="text-center">6<br>лет</span>
-          <span class="text-center">7<br>лет</span>
-          <span class="text-center">8<br>лет</span> <!-- добавлен 8-й год -->
-        </div>
-      </div>
+                        <div class="mt-2 flex justify-between text-xs text-gray-700">
+                            <span class="text-center">1<br>год</span>
+                            <span class="text-center">2<br>года</span>
+                            <span class="text-center">3<br>года</span>
+                            <span class="text-center">4<br>года</span>
+                            <span class="text-center">5<br>лет</span> <!-- исправлено: "лет", а не "года" -->
+                            <span class="text-center">6<br>лет</span>
+                            <span class="text-center">7<br>лет</span>
+                            <span class="text-center">8<br>лет</span> <!-- добавлен 8-й год -->
+                        </div>
+                    </div>
 
-      <div class="mt-6 text-center">
-        <span class="font-medium text-gray-700">Ежемесячный платеж:</span>
-        <!-- Сохранён оригинальный span, но добавлен класс для JS -->
-        <span class="text-lg font-bold text-gray-900 ml-2 monthly-payment-mobile">1 000 000 ₽</span>
-      </div>
-    </div>
+                    <div class="mt-6 text-center">
+                        <span class="font-medium text-gray-700">Ежемесячный платеж:</span>
+                        <!-- Сохранён оригинальный span, но добавлен класс для JS -->
+                        <span class="text-lg font-bold text-gray-900 ml-2 monthly-payment-mobile">1 000 000 ₽</span>
+                    </div>
+                </div>
 
-    <!-- Десктопная версия -->
-    <div class="hidden md:block">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div>
-          <label for="car-price" class="block text-sm font-medium text-gray-700 mb-2">Стоимость автомобиля</label>
-          <input type="number" id="car-price" value="2000000" min="0" step="1000"
-            class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
-        </div>
-        <div>
-          <label for="down-payment" class="block text-sm font-medium text-gray-700 mb-2">Первоначальный взнос</label>
-          <input type="number" id="down-payment" value="1000000" min="0" step="1000"
-            class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
-        </div>
-      </div>
+                <!-- Десктопная версия -->
+                <div class="hidden md:block">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <label for="car-price" class="block text-sm font-medium text-gray-700 mb-2">Стоимость
+                                автомобиля</label>
+                            <input type="number" id="car-price" value="2000000" min="0" step="1000"
+                                class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
+                        </div>
+                        <div>
+                            <label for="down-payment"
+                                class="block text-sm font-medium text-gray-700 mb-2">Первоначальный взнос</label>
+                            <input type="number" id="down-payment" value="1000000" min="0" step="1000"
+                                class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
+                        </div>
+                    </div>
 
-      <div class="mb-6">
-        <label class="block text-sm font-medium text-gray-700 mb-2">Срок кредита</label>
-        <!-- ИСПРАВЛЕНО: max="8" вместо 10 -->
-        <input type="range" min="1" max="8" value="5"
-          class="credit-slider desktop w-full rounded-full cursor-pointer" />
-        <div class="flex justify-between mt-2 text-sm text-gray-700">
-          <!-- Сохранён оригинальный span для срока, но добавлен класс -->
-          <span class="bg-white px-3 py-2 rounded-lg shadow-sm term-years">5 лет</span>
-          <span class="font-medium">Ежемесячный платеж</span>
-          <!-- Сохранён оригинальный span для платежа, но добавлен класс -->
-          <span class="bg-white px-3 py-2 rounded-lg shadow-sm monthly-payment-desktop">1 000 000 ₽</span>
-        </div>
-      </div>
-    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Срок кредита</label>
+                        <!-- ИСПРАВЛЕНО: max="8" вместо 10 -->
+                        <input type="range" min="1" max="8" value="5"
+                            class="credit-slider desktop w-full rounded-full cursor-pointer" />
+                        <div class="flex justify-between mt-2 text-sm text-gray-700">
+                            <!-- Сохранён оригинальный span для срока, но добавлен класс -->
+                            <span class="bg-white px-3 py-2 rounded-lg shadow-sm term-years">5 лет</span>
+                            <span class="font-medium">Ежемесячный платеж</span>
+                            <!-- Сохранён оригинальный span для платежа, но добавлен класс -->
+                            <span class="bg-white px-3 py-2 rounded-lg shadow-sm monthly-payment-desktop">1 000 000
+                                ₽</span>
+                        </div>
+                    </div>
+                </div>
 
-  </div>
-</section>
+            </div>
+        </section>
 
 
         <section class="container mx-auto space-y-[40px] px-4 sm:px-6 md:px-8 py-10">
@@ -467,12 +472,7 @@
                 <!-- Адрес -->
                 <div>
                     <div class="flex items-center gap-2 text-sm mb-1">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 10C21 17 13 21 13 21C13 21 5 17 5 10C5 3 10 1 13 1C16 1 21 3 21 10Z"
-                                stroke="currentColor" stroke-width="2" />
-                            <path d="M13 1V3" stroke="currentColor" stroke-width="2" />
-                            <path d="M13 21V23" stroke="currentColor" stroke-width="2" />
-                        </svg>
+                        <img src="../assets/footer/адрес.svg" alt="">
                         Адрес
                     </div>
                     <p class="text-lg font-medium">г. Москва, Береговой проезд, дом 4/6с3</p>
@@ -481,10 +481,8 @@
                 <!-- График работы -->
                 <div>
                     <div class="flex items-center gap-2 text-sm mb-1">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
-                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
+                        <img src="../assets/footer/часы работы.svg" alt="">
+
                         График работы
                     </div>
                     <p class="text-lg font-medium">Ежедневно с 9:00 до 21:00</p>
@@ -493,14 +491,8 @@
                 <!-- Контакты -->
                 <div>
                     <div class="flex items-center gap-2 text-sm mb-1">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M21 15C21 17.2091 19.2091 19 17 19H7C4.79086 19 3 17.2091 3 15V9C3 6.79086 4.79086 5 7 5H17C19.2091 5 21 6.79086 21 9V15Z"
-                                stroke="currentColor" stroke-width="2" />
-                            <path d="M16 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                            <path d="M8 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                            <path d="M13 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                        </svg>
+                        <img src="../assets/footer/контакты.svg" alt="">
+
                         Контакты
                     </div>
                     <p class="text-lg font-medium">+7 999 999 99 99</p>
