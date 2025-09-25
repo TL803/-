@@ -72,7 +72,7 @@
     </header>
 
 
-    <main class="container mx-auto space-y-[40px] py-14">
+    <main class="container mx-auto space-y-[40px] px-4 sm:px-6 md:px-8 py-10">
         <section class="">
             <div class="relative w-full mx-auto rounded-2xl overflow-hidden shadow-lg">
                 <div class="w-full h-[500px] bg-cover bg-center relative"
@@ -103,9 +103,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                 <div class="space-y-4">
-                    <!-- Все карточки в одну колонку -->
-                    <div class="grid grid-cols-1 gap-3 sm:gap-4 mb-3 sm:mb-5">
-                        <!-- Карточка 1: Лучшие условия автокредитования -->
+                    <div class="grid grid-cols-1 gap-3 sm:gap-4">
                         <div
                             class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
                             <div class="flex items-start mb-2">
@@ -127,7 +125,7 @@
                         <div
                             class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
                             <div class="flex items-start mb-2">
-                                <img src="../assets/brands/solaris/icons/Директ (7).svg"
+                                <img src="../assets/brands/solaris/icons/Звезда.svg"
                                     class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
                                 <h3
                                     class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
@@ -145,7 +143,7 @@
                         <div
                             class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
                             <div class="flex items-start mb-2">
-                                <img src="../assets/brands/solaris/icons/Директ (7).svg"
+                                <img src="../assets/brands/solaris/icons/Звезда (1).svg"
                                     class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
                                 <h3
                                     class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
@@ -162,40 +160,47 @@
                     </div>
                 </div>
 
-                <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                <div class="relative rounded-2xl h-[500px] sm:h-auto overflow-hidden shadow-xl bg-white">
+                    <!-- Фоновое изображение -->
                     <img src="../assets/brands/solaris/f1259b96cdd14690b27d7f9608c6592ee90c33c0.jpg" alt="Автомобиль"
                         class="w-full h-full object-cover">
 
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center p-6 md:p-8">
-
-                        <h3 class="text-white text-xl md:text-2xl font-bold mb-2">
-                            Воспользуйтесь индивидуальными условиями Solaris Finance от 4,9%.
-                        </h3>
-                        <p class="text-white text-sm md:text-base mb-6">Введите ваши данные</p>
-
-                        <form id="car-selection" class="space-y-4">
-                            <input type="text" placeholder="ФИО"
-                                class="w-full px-4 py-3 bg-white bg-opacity-20 backdrop-blur-sm text-white placeholder-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-
-                            <input type="tel" id="calc-phone" placeholder="Ваш номер телефона"
-                                class="w-full px-4 py-3 bg-white bg-opacity-20 backdrop-blur-sm text-white placeholder-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-
-                            <div class="flex items-center space-x-3 sm:space-x-5 mt-4">
-                                <label class="custom-checkbox w-8 h-8">
-                                    <input checked type="checkbox" id="myCheckbox" />
-                                    <span class="checkmark">✓</span>
-                                </label>
-                                <span
-                                    class="text-sm sm:text-[18px] text-white leading-relaxed min-w-0 break-words hyphens-auto">
-                                    Я согласен с политикой обработки персональных данных
-                                </span>
+                    <!-- Текст и форма поверх изображения -->
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col p-4 sm:p-6 md:p-8 h-full">
+                        <div class="flex flex-col h-full justify-between">
+                            <div>
+                                <h3 class="text-white text-lg sm:text-xl md:text-2xl font-bold mb-2 leading-tight">
+                                    Воспользуйтесь индивидуальными условиями Solaris Finance от 4,9%.
+                                </h3>
+                                <p class="text-white text-xs sm:text-sm mb-4">Введите ваши данные</p>
                             </div>
 
-                            <button type="submit"
-                                class="w-full py-3 bg-white text-blue-800 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200">
-                                Отправить заявку
-                            </button>
-                        </form>
+                            <form id="car-selection" class="space-y-4 w-full max-w-full box-border flex-grow">
+                                <input type="text" placeholder="ФИО"
+                                    class="w-full px-4 py-3 sm:py-4 bg-white bg-opacity-20 backdrop-blur-sm text-white placeholder-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base">
+
+                                <input type="tel" id="calc-phone" placeholder="Ваш номер телефона"
+                                    class="w-full px-4 py-3 sm:py-4 bg-white bg-opacity-20 backdrop-blur-sm text-white placeholder-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base">
+
+                                <div class="flex items-start space-x-3 sm:space-x-5 mt-2">
+                                    <label class="custom-checkbox flex-shrink-0 w-8 h-8 mt-0.5">
+                                        <input checked type="checkbox" id="myCheckbox" class="sr-only" />
+                                        <span
+                                            class="checkmark block  flex items-center justify-center text-white">✓</span>
+                                    </label>
+                                    <span class="text-xs sm:text-sm text-white leading-relaxed flex-1 min-w-0">
+                                        Я согласен с <a href="./privacypolicy.html"
+                                    class="text-[#0B3F96] underline hover:text-gray-900">политикой обработки
+                                    персональных данных</a>
+                                    </span>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full py-3 sm:py-4 bg-white text-blue-800 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200 text-sm sm:text-base">
+                                    Отправить заявку
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
 

@@ -89,7 +89,7 @@
                                 от SOUEAST —не пропусти!</h2>
                             <button
                                 class="mt-3 select-none bg-gradient-to-r from-[#000F6E] to-[#56E0EA] md:text-[20px] text-[11px] text-white font-regular md:font-medium px-[13px] py-[8px] md:py-[20px] md:px-[28px] rounded-[20px] shadow-md transition duration-300 hover:from-[#00117A] hover:to-[#4CD6F5] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#56E0EA]">
-                                Купить в кредит от 3 333 ₽/мес
+                                Купить в кредит от 24 999 ₽/мес
                             </button>
                         </div>
                     </div>
@@ -250,15 +250,12 @@
             <div class=" px-4 py-8">
                 <h2 class="text-2xl font-bold text-gray-900 mb-6">Быстрый и удобный подбор автомобиля</h2>
 
-                <!-- Основной блок -->
                 <div class="bg-gradient-to-r from-blue-800 to-blue-400 rounded-xl p-6 shadow-lg">
-                    <!-- Вопрос -->
                     <div
                         class="mb-6 bg-white rounded-full px-6 py-3 text-gray-800 text-lg font-medium flex items-center justify-center">
                         Какой автомобиль вы хотите?
                     </div>
 
-                    <!-- Кнопки выбора типа авто -->
                     <div class="flex flex-wrap gap-3 mb-6">
                         <button
                             class="px-4 py-2 bg-white text-gray-800 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-200">Семейный</button>
@@ -278,7 +275,6 @@
                             class="px-4 py-2 bg-white text-gray-800 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors duration-200">Коммерческий</button>
                     </div>
 
-                    <!-- Кнопка "Найти" -->
                     <div class="flex justify-end">
                         <button
                             class="px-8 py-3 bg-white text-blue-700 rounded-full text-lg font-medium hover:bg-gray-100 transition-colors duration-200 shadow-md">
@@ -376,39 +372,82 @@
         </section>
 
 
-        <section class="py-8 px-4  mx-auto">
-            <h2 class="text-3xl font-bold text-[#01101B] mb-10">Рассчитать кредит</h2>
+<section class="py-8 px-4 mx-auto ">
+  <h2 class="text-3xl font-bold text-[#01101B] mb-10">Рассчитать кредит</h2>
 
-            <div class="bg-gray-100 rounded-xl p-8 shadow-sm">
-                <!-- Стоимость автомобиля и первоначальный взнос -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Стоимость автомобиля</label>
-                        <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm">
-                            <span class="text-lg font-semibold text-gray-900">2 000 000 ₽</span>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Первоначальный взнос</label>
-                        <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm">
-                            <span class="text-lg font-semibold text-gray-900">1 000 000 ₽</span>
-                        </div>
-                    </div>
-                </div>
+  <div class="bg-gray-100 rounded-xl p-8 shadow-sm">
 
-                <!-- Срок кредита -->
-                <div class="mb-6">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Срок кредита</label>
-                    <input type="range" min="1" max="10" value="5"
-                        class="w-full h-[30px] bg-gray-200 rounded-full appearance-none cursor-pointer slider" />
-                    <div class="flex justify-between mt-2 text-sm text-gray-700">
-                        <span class="bg-white px-3 py-2 rounded-lg shadow-sm">5 лет</span>
-                        <span class="font-medium">Ежемесячный платеж</span>
-                        <span class="bg-white px-3 py-2 rounded-lg shadow-sm">1 000 000 ₽</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Мобильная версия -->
+    <div class="md:hidden space-y-6">
+      <div>
+        <label for="car-price-mobile" class="block text-sm font-medium text-gray-700 mb-2">Стоимость автомобиля</label>
+        <input type="number" id="car-price-mobile" value="2000000" min="0" step="10000"
+          class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
+      </div>
+
+      <div>
+        <label for="down-payment-mobile" class="block text-sm font-medium text-gray-700 mb-2">Первоначальный взнос</label>
+        <input type="number" id="down-payment-mobile" value="1000000" min="0" step="1000"
+          class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Срок кредитования</label>
+        <!-- ИСПРАВЛЕНО: max="8" вместо 7 -->
+        <input type="range" min="1" max="8" value="5"
+          class="credit-slider w-full rounded-full cursor-pointer" />
+
+        <div class="mt-2 flex justify-between text-xs text-gray-700">
+          <span class="text-center">1<br>год</span>
+          <span class="text-center">2<br>года</span>
+          <span class="text-center">3<br>года</span>
+          <span class="text-center">4<br>года</span>
+          <span class="text-center">5<br>лет</span> <!-- исправлено: "лет", а не "года" -->
+          <span class="text-center">6<br>лет</span>
+          <span class="text-center">7<br>лет</span>
+          <span class="text-center">8<br>лет</span> <!-- добавлен 8-й год -->
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <span class="font-medium text-gray-700">Ежемесячный платеж:</span>
+        <!-- Сохранён оригинальный span, но добавлен класс для JS -->
+        <span class="text-lg font-bold text-gray-900 ml-2 monthly-payment-mobile">1 000 000 ₽</span>
+      </div>
+    </div>
+
+    <!-- Десктопная версия -->
+    <div class="hidden md:block">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div>
+          <label for="car-price" class="block text-sm font-medium text-gray-700 mb-2">Стоимость автомобиля</label>
+          <input type="number" id="car-price" value="2000000" min="0" step="1000"
+            class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
+        </div>
+        <div>
+          <label for="down-payment" class="block text-sm font-medium text-gray-700 mb-2">Первоначальный взнос</label>
+          <input type="number" id="down-payment" value="1000000" min="0" step="1000"
+            class="w-full text-lg font-semibold text-gray-900 border border-gray-300 rounded-lg px-4 py-3 bg-white shadow-sm" />
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-sm font-medium text-gray-700 mb-2">Срок кредита</label>
+        <!-- ИСПРАВЛЕНО: max="8" вместо 10 -->
+        <input type="range" min="1" max="8" value="5"
+          class="credit-slider desktop w-full rounded-full cursor-pointer" />
+        <div class="flex justify-between mt-2 text-sm text-gray-700">
+          <!-- Сохранён оригинальный span для срока, но добавлен класс -->
+          <span class="bg-white px-3 py-2 rounded-lg shadow-sm term-years">5 лет</span>
+          <span class="font-medium">Ежемесячный платеж</span>
+          <!-- Сохранён оригинальный span для платежа, но добавлен класс -->
+          <span class="bg-white px-3 py-2 rounded-lg shadow-sm monthly-payment-desktop">1 000 000 ₽</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
         <section class="container mx-auto space-y-[40px] px-4 sm:px-6 md:px-8 py-10">
@@ -497,6 +536,7 @@
     <script src="../script/components/timer/timer.js"></script>
     <script src="../script/modules/iterations/marks.js"></script>
     <script src="../script/modules/iterations/cars.js"></script>
+    <script src="../script/components/slider/range/maincalc.js"></script>
 </body>
 
 </html>

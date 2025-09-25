@@ -226,16 +226,19 @@
 
                         <div class="grid grid-cols-3 gap-4 mt-8 max-w-4xl mx-auto w-full">
                             <div class="rounded-lg overflow-hidden bg-white shadow-sm">
-                                <img src="../assets/auto/moreCarImages/Trade-in.png" alt="Trade-in"
-                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                                <img src="../assets/auto/moreCarImages/Trade-in.png"
+                                    data-src="../assets/auto/moreCarImages/Trade-in.png" alt="Trade-in"
+                                    class="w-full h-auto aspect-[5/3] object-cover cursor-pointer rounded-lg shadow-md hover:scale-105 transition-transform duration-300 js-gallery-image" />
                             </div>
                             <div class="rounded-lg overflow-hidden bg-white shadow-sm">
-                                <img src="../assets/auto/moreCarImages/Прямая скидка-1.png" alt="Прямая скидка 1"
-                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                                <img src="../assets/auto/moreCarImages/Прямая скидка-1.png"
+                                    data-src="../assets/auto/moreCarImages/Прямая скидка-1.png" alt="Прямая скидка 1"
+                                    class="w-full h-auto aspect-[5/3] object-cover cursor-pointer rounded-lg shadow-md hover:scale-105 transition-transform duration-300 js-gallery-image" />
                             </div>
                             <div class="rounded-lg overflow-hidden bg-white shadow-sm">
-                                <img src="../assets/auto/moreCarImages/Прямая скидка.png" alt="Прямая скидка"
-                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                                <img src="../assets/auto/moreCarImages/Прямая скидка.png"
+                                    data-src="../assets/auto/moreCarImages/Прямая скидка.png" alt="Прямая скидка"
+                                    class="w-full h-auto aspect-[5/3] object-cover cursor-pointer rounded-lg shadow-md hover:scale-105 transition-transform duration-300 js-gallery-image" />
                             </div>
                         </div>
                     </div>
@@ -304,7 +307,9 @@
                             </label>
                             <span
                                 class="text-sm sm:text-[18px] text-gray-700 leading-relaxed min-w-0 break-words hyphens-auto">
-                                Я согласен с политикой обработки персональных данных
+                                Я согласен с <a href="./privacypolicy.html"
+                                    class="text-[#0B3F96] underline hover:text-gray-900">политикой обработки
+                                    персональных данных</a>
                             </span>
                         </div>
 
@@ -374,16 +379,19 @@
 
                         <div class="grid grid-cols-3 gap-4 mt-8 max-w-4xl mx-auto w-full">
                             <div class="rounded-lg overflow-hidden bg-white shadow-sm">
-                                <img src="../assets/auto/moreCarImages/Trade-in.png" alt="Trade-in"
-                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                                <img src="../assets/auto/moreCarImages/Trade-in.png"
+                                    data-src="../assets/auto/moreCarImages/Trade-in.png" alt="Trade-in"
+                                    class="w-full h-auto aspect-[5/3] object-cover cursor-pointer rounded-lg shadow-md hover:scale-105 transition-transform duration-300 js-gallery-image" />
                             </div>
                             <div class="rounded-lg overflow-hidden bg-white shadow-sm">
-                                <img src="../assets/auto/moreCarImages/Прямая скидка-1.png" alt="Прямая скидка 1"
-                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                                <img src="../assets/auto/moreCarImages/Прямая скидка-1.png"
+                                    data-src="../assets/auto/moreCarImages/Прямая скидка-1.png" alt="Прямая скидка 1"
+                                    class="w-full h-auto aspect-[5/3] object-cover cursor-pointer rounded-lg shadow-md hover:scale-105 transition-transform duration-300 js-gallery-image" />
                             </div>
                             <div class="rounded-lg overflow-hidden bg-white shadow-sm">
-                                <img src="../assets/auto/moreCarImages/Прямая скидка.png" alt="Прямая скидка"
-                                    class="w-full h-auto aspect-[5/3] object-cover" />
+                                <img src="../assets/auto/moreCarImages/Прямая скидка.png"
+                                    data-src="../assets/auto/moreCarImages/Прямая скидка.png" alt="Прямая скидка"
+                                    class="w-full h-auto aspect-[5/3] object-cover cursor-pointer rounded-lg shadow-md hover:scale-105 transition-transform duration-300 js-gallery-image" />
                             </div>
                         </div>
                     </div>
@@ -467,11 +475,11 @@
                                 class="w-full h-full object-cover" />
                         </div>
                         <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-sm">
-                            <img src="../assets/loan/Rectangle 92.png" alt="Фото салона 2"
+                            <img src="../assets/loan/Rectangle 93.png" alt="Фото салона 2"
                                 class="w-full h-full object-cover" />
                         </div>
                         <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-sm">
-                            <img src="../assets/loan/Rectangle 92.png" alt="Фото салона 3"
+                            <img src="../assets/loan/Rectangle 94.png" alt="Фото салона 3"
                                 class="w-full h-full object-cover" />
                         </div>
                     </div>
@@ -559,6 +567,45 @@
         </div>
     </footer>
     <!-- Контейнер галереи -->
+             <div id="imageModal"
+            class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-95 backdrop-blur-sm transition-opacity duration-300">
+            <div class="relative w-full max-w-6xl h-full max-h-screen p-4 md:p-6">
+
+                <!-- Контейнер изображения -->
+                <div class="w-full h-full flex items-center justify-center">
+                    <img id="modalImage" src="" alt="Просмотр изображения"
+                        class="max-w-full max-h-full object-contain rounded-2xl shadow-2xl border border-white/10 transition-opacity duration-300" />
+                </div>
+
+                <!-- Кнопка "Назад" -->
+                <button id="prevBtn"
+                    class="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-white/10 to-transparent backdrop-blur-sm border border-white/20 text-white text-2xl md:text-3xl opacity-90 hover:opacity-100 focus:outline-none transition-all duration-300 hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <!-- Кнопка "Вперед" -->
+                <button id="nextBtn"
+                    class="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-gradient-to-l from-white/10 to-transparent backdrop-blur-sm border border-white/20 text-white text-2xl md:text-3xl opacity-90 hover:opacity-100 focus:outline-none transition-all duration-300 hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Кнопка закрытия -->
+                <button id="closeModal"
+                    class="absolute top-6 right-6 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white text-xl md:text-2xl opacity-90 hover:opacity-100 focus:outline-none transition-all duration-300 hover:scale-110 hover:bg-white/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+            </div>
+        </div>
 
 
     <style>
@@ -593,6 +640,6 @@
 <script src="../script/modules/car/showCar.js"></script>
 <script src="../script/modules/car/changeColor.js" type="module"></script>
 <script src="../script/utils/validation.js"></script>
-<!-- <script src="../script/components/modals/showPhotoModal.js"></script> -->
+<script src="../script/components/modals/showPhotoModal.js"></script>
 
 </html>
