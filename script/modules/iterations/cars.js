@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         carElement.innerHTML = `
             <a href="${link}" class="relative w-full h-[260px] sm:h-[280px] md:h-[300px]">
+                <!-- Плашка NEW -->
+                <div class="absolute top-0 right-6 bg-white rounded-b-xl px-6 py-1 flex items-center gap-1 shadow-sm z-20">
+                    <img src="../assets/auto/Vector (4).svg" alt="" /> 
+                    <span class="text-red-500 font-bold text-xs sm:text-sm">NEW</span>
+                </div>
+
                 <img src="${car.bg}" alt="Фон" class="w-full h-full object-cover" />
                 <img src="${car.car}" alt="${car.name}" class="absolute top-6 sm:top-8 left-0 w-full h-auto object-contain z-10 px-2 sm:px-4" />
             </a>
