@@ -1,6 +1,4 @@
-// JavaScript: универсальный обработчик для всех data-cars="clients"
 document.addEventListener('DOMContentLoaded', () => {
-  // Находим все контейнеры с data-cars="clients"
   const containers = document.querySelectorAll('[data-cars="clients"]');
 
   const marks = [
@@ -18,12 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 12, img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Honda_logo.svg/120px-Honda_logo.svg.png", mark: "Honda", country: "Japan", founded: 1948 }
   ];
 
-  // Функция рендеринга для одного контейнера
   function renderMarks(container) {
-    // Очищаем контейнер
     container.innerHTML = '';
 
-    // Создаём сетку
     const grid = document.createElement('div');
     grid.className = 'grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6';
 
@@ -35,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         rounded-lg lg:rounded-xl shadow-sm hover:shadow
         cursor-pointer transform hover:scale-105
       `;
-      markElement.href = `/mark/${mark.id}`;
-      markElement.setAttribute('data-mark-id', mark.id); // можно использовать для аналитики
+      markElement.href = `brand.html?id=${mark.id}`;
+      markElement.setAttribute('data-mark-id', mark.id);
       markElement.innerHTML = `
         <img 
           src="${mark.img.trim()}" 
@@ -53,16 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
     container.appendChild(grid);
   }
 
-  // Рендерим каждый подходящий контейнер
   containers.forEach(renderMarks);
 
-  // Дополнительно: если нужно слушать клики (например, аналитика)
   document.addEventListener('click', (e) => {
     const markLink = e.target.closest('[data-mark-id]');
     if (markLink) {
       const markId = markLink.getAttribute('data-mark-id');
       console.log(`Клик по марке: ${markId}`);
-      // Здесь можно отправить событие в GA, Я.Метрику и т.д.
     }
   });
 });

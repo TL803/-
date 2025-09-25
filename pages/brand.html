@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О компании</title>
+
+    <!-- Подключаем шрифт Geologica от Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap">
+
+    <!-- Подключаем Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/checkbox.css">
+    <link rel="stylesheet" href="../style/slider.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        customGray: '#1a1a1a',
+                        lightGray: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Geologica', 'ui-sans-serif', 'system-ui', 'sans-serif']
+                    },
+
+                }
+            }
+        }
+    </script>
+
+    <style>
+
+
+    </style>
+</head>
+
+<body class="font-sans  text-[#01101B]">
+    <header
+        class="container mx-auto md:px-[40px] px-4 md:py-[28px] my-6 rounded-xl bg-white  flex items-center justify-between md:shadow-[0px_20px_50px_rgba(0,0,0,0.1)]">
+        <div class="flex items-center gap-[42px]">
+            <a href="./index.html" class="text-primary">
+                <img src="../assets/Logo Независимость(2) 2.svg" alt="">
+            </a>
+
+            <nav class="hidden xl:flex space-x-[32px] text-sm font-medium">
+                <a href="./index.html" class="text-[#1C1C1C]">Главная</a>
+                <a href="./loan.html" class="text-[#1C1C1C]">Автокредит</a>
+                <a href="./tradein.html" class="text-[#1C1C1C]">Trade-in</a>
+                <a href="./stocks.html" class="text-[#1C1C1C]">Акции</a>
+                <a href="./leasing.html" class="text-[#1C1C1C]">Лизинг</a>
+                <a href="./ransom.html" class="text-[#1C1C1C]">Выкуп</a>
+                <a href="./taxi.html" class="text-[#1C1C1C]">Авто под такси</a>
+                <a href="./direct.html" class="text-[#1C1C1C]">Директ</a>
+                <a href="./contacts.html" class="text-[#1C1C1C]">Контакты</a>
+            </nav>
+        </div>
+
+        <div class="flex xl:hidden space-x-[16px]">
+            <a href="tel:+79999999999"><img src="../assets/mobile/Телефон.svg" alt="телефон"></a>
+            <img src="../assets/mobile/burger.svg" alt="бургер">
+        </div>
+
+        <button class="hidden xl:block px-[24px] py-[16px]  font-regular text-[#000F6E] bg-[#56E0EA] rounded-[16px]">
+            Обратная связь
+        </button>
+    </header>
+
+
+    <main class="container mx-auto space-y-[40px] py-14">
+        <section class="">
+            <div class="relative w-full mx-auto rounded-2xl overflow-hidden shadow-lg">
+                <div class="w-full h-[500px] bg-cover bg-center relative"
+                    style="background-image: url('../assets/brands/solaris/db9338518369a123445412b9381aca12ef7d0ed5.jpg');">
+                    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                </div>
+
+                <div class="absolute top-6 left-6 flex items-center space-x-2 z-10">
+                    <img src="../assets/brands/solaris/logo/Group.svg" alt="Solaris Logo">
+                </div>
+
+                <div
+                    class="absolute top-1/3 left-6 text-white text-2xl md:text-3xl font-bold leading-tight max-w-md z-10">
+                    Solaris: создавай свой ритм, создавай свой путь
+                </div>
+
+                <div
+                    class="absolute bottom-6 left-12 text-white leading-[30px] text-base md:text-[24px] font-medium z-10">
+                    Скидки до 581 000 руб<br>
+                    Акция действует до 15 октября!
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Solaris Finance</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <div class="space-y-4">
+                    <!-- Все карточки в одну колонку -->
+                    <div class="grid grid-cols-1 gap-3 sm:gap-4 mb-3 sm:mb-5">
+                        <!-- Карточка 1: Лучшие условия автокредитования -->
+                        <div
+                            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
+                            <div class="flex items-start mb-2">
+                                <img src="../assets/brands/solaris/icons/Директ (7).svg"
+                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                                <h3
+                                    class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                                    Лучшие условия автокредитования
+                                </h3>
+                            </div>
+                            <p
+                                class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                                Ставка от 4,9% — это одно из самых выгодных решений на рынке. А низкие платежи каждый
+                                месяц позволяют существенно снизить общие расходы на ваш новый автомобиль.
+                            </p>
+                        </div>
+
+                        <!-- Карточка 2: Доступное кредитование для каждого -->
+                        <div
+                            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
+                            <div class="flex items-start mb-2">
+                                <img src="../assets/brands/solaris/icons/Директ (7).svg"
+                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                                <h3
+                                    class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                                    Доступное кредитование для каждого
+                                </h3>
+                            </div>
+                            <p
+                                class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                                В нашем автосалоне не нужен первый взнос. Мы предоставляем рассрочку на эту сумму без
+                                переплат, что открывает путь к автомобилю для большинства клиентов.
+                            </p>
+                        </div>
+
+                        <!-- Карточка 3: Ваш личный эксперт всегда на связи -->
+                        <div
+                            class="bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.08)] rounded-lg p-3 sm:p-4 flex flex-col box-border transition-all duration-200 min-w-0">
+                            <div class="flex items-start mb-2">
+                                <img src="../assets/brands/solaris/icons/Директ (7).svg"
+                                    class="w-8 sm:w-12 mr-2 flex-shrink-0" alt="Иконка" />
+                                <h3
+                                    class="font-medium text-lg sm:text-xl md:text-2xl text-gray-900 leading-tight min-w-0 break-words hyphens-auto">
+                                    Ваш личный эксперт всегда на связи
+                                </h3>
+                            </div>
+                            <p
+                                class="text-gray-700 text-sm sm:text-[17px] font-normal leading-relaxed min-w-0 break-words hyphens-auto max-w-prose">
+                                Оставьте заявку на интересующую модель и узнайте предварительную стоимость кредита
+                                онлайн. В течение 30 минут наш специалист свяжется с вами и бесплатно проконсультирует
+                                по всем условиям.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                    <img src="../assets/brands/solaris/f1259b96cdd14690b27d7f9608c6592ee90c33c0.jpg" alt="Автомобиль"
+                        class="w-full h-full object-cover">
+
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center p-6 md:p-8">
+
+                        <h3 class="text-white text-xl md:text-2xl font-bold mb-2">
+                            Воспользуйтесь индивидуальными условиями Solaris Finance от 4,9%.
+                        </h3>
+                        <p class="text-white text-sm md:text-base mb-6">Введите ваши данные</p>
+
+                        <form id="car-selection" class="space-y-4">
+                            <input type="text" placeholder="ФИО"
+                                class="w-full px-4 py-3 bg-white bg-opacity-20 backdrop-blur-sm text-white placeholder-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+                            <input type="tel" id="calc-phone" placeholder="Ваш номер телефона"
+                                class="w-full px-4 py-3 bg-white bg-opacity-20 backdrop-blur-sm text-white placeholder-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+                            <div class="flex items-center space-x-3 sm:space-x-5 mt-4">
+                                <label class="custom-checkbox w-8 h-8">
+                                    <input checked type="checkbox" id="myCheckbox" />
+                                    <span class="checkmark">✓</span>
+                                </label>
+                                <span
+                                    class="text-sm sm:text-[18px] text-white leading-relaxed min-w-0 break-words hyphens-auto">
+                                    Я согласен с политикой обработки персональных данных
+                                </span>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full py-3 bg-white text-blue-800 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                                Отправить заявку
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-[36px] font-bold text-gray-900">Solaris </h2>
+
+            <div data-component="car-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[36px]">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#152F65] text-white mx-auto px-6 py-12 md:px-10 lg:px-14">
+        <div class="flex flex-col container mx-auto md:flex-row gap-10 items-start justify-between">
+
+            <!-- Левая колонка: информация -->
+            <div class="flex-1 space-y-8">
+
+                <!-- Адрес -->
+                <div>
+                    <div class="flex items-center gap-2 text-sm mb-1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10C21 17 13 21 13 21C13 21 5 17 5 10C5 3 10 1 13 1C16 1 21 3 21 10Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M13 1V3" stroke="currentColor" stroke-width="2" />
+                            <path d="M13 21V23" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        Адрес
+                    </div>
+                    <p class="text-lg font-medium">г. Москва, Береговой проезд, дом 4/6с3</p>
+                </div>
+
+                <!-- График работы -->
+                <div>
+                    <div class="flex items-center gap-2 text-sm mb-1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        График работы
+                    </div>
+                    <p class="text-lg font-medium">Ежедневно с 9:00 до 21:00</p>
+                </div>
+
+                <!-- Контакты -->
+                <div>
+                    <div class="flex items-center gap-2 text-sm mb-1">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 15C21 17.2091 19.2091 19 17 19H7C4.79086 19 3 17.2091 3 15V9C3 6.79086 4.79086 5 7 5H17C19.2091 5 21 6.79086 21 9V15Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M16 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M8 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M13 15V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        Контакты
+                    </div>
+                    <p class="text-lg font-medium">+7 999 999 99 99</p>
+                </div>
+
+                <!-- Кнопка "Обратная связь" -->
+                <button
+                    class="mt-6 bg-white text-[#152F65] font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                    Обратная связь
+                </button>
+            </div>
+
+            <!-- Правая колонка: карта (адаптивная) -->
+            <div class="w-full md:w-[500px] h-auto aspect-video rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A29abbbf054124cc69db31f2ac7c2cdfbb031d022af9fff6b7eb280d67ff71387&amp;source=constructor"
+                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen loading="lazy">
+                </iframe>
+            </div>
+
+        </div>
+
+        <!-- Подвал -->
+        <div class="mt-12 container mx-auto text-xs leading-relaxed text-center md:text-left">
+            Все права защищены<br>
+            ООО Ведьмин дом, вл. 24, корп.3 ОГРН 11769520105554480 ИНН 6950207759
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/imask@7.0.0/dist/imask.min.js"></script>
+    <script src="../script/components/timer/timer.js"></script>
+    <script src="../script/modules/iterations/marks.js"></script>
+    <script src="../script/modules/iterations/cars.js"></script>
+    <script src="../script/utils/validation.js"></script>
+
+</body>
+
+</html>
