@@ -62,13 +62,47 @@
 
         <div class="flex xl:hidden space-x-[16px]">
             <a href="tel:+79999999999"><img src="../assets/mobile/Телефон.svg" alt="телефон"></a>
-            <img src="../assets/mobile/burger.svg" alt="бургер">
+            <img id="toggle-burger" src="../assets/mobile/burger.svg" alt="бургер">
         </div>
 
         <button class="hidden xl:block px-[24px] py-[16px]  font-regular text-[#000F6E] bg-[#56E0EA] rounded-[16px]">
             Обратная связь
         </button>
     </header>
+
+
+
+    <div id="overlay" class="fixed hidden inset-0 bg-black bg-opacity-50 z-[99]"></div>
+
+    <div id="burger" class="fixed hidden right-0 top-0 h-full w-[60%] bg-white z-[99] shadow-xl flex flex-col p-6">
+        <img class="w-10 mb-[30px]" src="../assets/Logo Независимость(2) 2.svg" alt="">
+        <nav class="flex-grow">
+            <a href="./index.html" class="block text-gray-800 hover:text-blue-700 py-2 font-medium text-lg">Главная</a>
+            <a href="./loan.html"
+                class="block text-gray-800 hover:text-blue-700 py-2 font-medium text-lg">Автокредит</a>
+            <a href="./tradein.html"
+                class="block text-gray-800 hover:text-blue-700 py-2 font-medium text-lg">Trade-in</a>
+            <a href="./stocks.html" class="block text-gray-800 hover:text-blue-700 py-2 font-medium text-lg">Акции</a>
+            <a href="./leasing.html" class="block text-gray-800 hover:text-blue-700 py-2 font-medium text-lg">Лизинг</a>
+            <a href="./ransom.html" class="block text-gray-800 hover:text-blue-700 py-2 font-medium text-lg">Выкуп</a>
+            <a href="./taxi.html" class="block text-gray-800 hover:text-blue-700 py-2 font-medium text-lg">Авто под
+                такси</a>
+            <a href="./direct.html" class="block text-gray-800 hover:text-blue-700 py-2 font-medium text-lg">Директ</a>
+            <a href="./contacts.html"
+                class="block text-gray-800 hover:text-blue-700 py-2 font-medium text-lg">Контакты</a>
+        </nav>
+        <div class="mt-8 space-y-4">
+            <div class="flex items-center gap-2 text-blue-700 font-medium">
+                <img src="../assets/mobile/Vector (5).svg" alt="">
+                <span>8 999 999 99 99</span>
+            </div>
+            <button
+                class="w-full py-3 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-full hover:from-cyan-500 hover:to-blue-600 transition">
+                Обратная связь
+            </button>
+        </div>
+    </div>
+
 
     <main class="container mx-auto mt-10 px-4  ">
         <section class="mx-auto ">
@@ -355,7 +389,7 @@
                         class="relative bg-white rounded-2xl overflow-hidden shadow-lg  transform transition-all duration-300 hover:scale-105 h-full min-h-[680px]">
                         <img src="../assets/benefit/b41e391a3b799d3651e9438b3f9fa9f41e66f021.png"
                             alt="Авто в кредит — без начального взноса!"
-                            class="w-full h-full object-cover object-bottom absolute inset-0">
+                            class="w-full h-full object-cover object-bottom absolute transform group-hover:scale-110 transition-transform duration-300 inset-0">
                         <div
                             class="absolute top-0 left-0 w-full p-4 md:p-5 bg-white bg-opacity-95 text-[#01101B] font-medium">
                             <div class="flex flex-col">
@@ -529,6 +563,7 @@
     <script src="../script/modules/iterations/marks.js"></script>
     <script src="../script/modules/iterations/cars.js"></script>
     <script src="../script/components/slider/range/maincalc.js"></script>
+    <script src="../script/navigation/burger.js"></script>
 </body>
 
 </html>
