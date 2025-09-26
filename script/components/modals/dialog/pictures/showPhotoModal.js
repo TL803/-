@@ -1,5 +1,3 @@
-// ../script/components/modals/showPhotoModal.js
-
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".js-gallery-image");
     const modal = document.getElementById("imageModal");

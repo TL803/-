@@ -14,7 +14,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/slider.css">
-
+    <link rel="stylesheet" href="../style/checkbox.css">
     <script>
         tailwind.config = {
             theme: {
@@ -33,10 +33,6 @@
         }
     </script>
 
-    <style>
-
-
-    </style>
 </head>
 
 <body class="font-sans  text-[#01101B]">
@@ -105,6 +101,37 @@
 
 
     <main class="container mx-auto mt-10 px-4  ">
+        <div class="flex flex-wrap gap-4 p-6">
+            <button data-open-modal="steps"
+                class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Steps
+            </button>
+
+            <button data-open-modal="time"
+                class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50">
+                Time Modal
+            </button>
+
+            <button data-open-modal="questions"
+                class="px-5 py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                Questions
+            </button>
+
+            <button data-open-modal="catching-up"
+                class="px-5 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50">
+                Catching Up
+            </button>
+
+            <button data-open-modal="customized-questions"
+                class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                Customized Questions
+            </button>
+
+            <button data-open-modal="test"
+                class="px-5 py-2.5 bg-gray-700 hover:bg-gray-800 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50">
+                Test
+            </button>
+        </div>
         <section class="mx-auto ">
             <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
                 Умный способ купить автомобиль
@@ -557,6 +584,7 @@
     </footer>
 
 
+<script src="https://unpkg.com/imask"></script>
 
     <script src="../script/components/slider/bannersSlider.js"></script>
     <script src="../script/components/timer/timer.js"></script>
@@ -564,6 +592,9 @@
     <script src="../script/modules/iterations/cars.js"></script>
     <script src="../script/components/slider/range/maincalc.js"></script>
     <script src="../script/navigation/burger.js"></script>
+
+
+    <script src="../script/components/modals/main.js" type="module"></script>
 </body>
 
 </html>
