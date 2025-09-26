@@ -13,7 +13,7 @@
     <!-- Подключаем Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/slider.css">
+    <link rel="stylesheet" href="../style/commonslider.css">
     <link rel="stylesheet" href="../style/checkbox.css">
 
     <script>
@@ -247,18 +247,26 @@
                         </div>
                     </div>
                 </div>
-
                 <div>
                     <h3
                         class="text-xl sm:text-2xl xl:text-[36px] font-semibold text-[#01101B] mb-6 sm:mb-8 min-w-0 break-words hyphens-auto">
                         3. Первоначальный взнос
                     </h3>
                     <div class="mb-6 sm:mb-8">
-                        <input type="range" id="initialPaymentSlider" min="10" max="70" step="7" value="20"
+                        <input type="range" id="initialPaymentSlider" min="0" max="90" step="10" value="20"
                             class="w-full h-2 sm:h-4 bg-gray-300 rounded-xl appearance-none cursor-pointer slider" />
                         <div
-                            class="flex justify-between mt-4 sm:mt-6 text-xs sm:text-[16px] text-[#000F6E] font-medium flex-wrap gap-y-2">
-                            <span>10%</span><span>20%</span><span>30%</span><span>40%</span><span>50%</span><span>60%</span><span>70%</span><span>80%</span><span>90%</span>
+                            class="flex justify-between mt-4 sm:mt-6 text-xs sm:text-[16px] text-[#000F6E] font-medium">
+                            <span>0%</span>
+                            <span>10%</span>
+                            <span>20%</span>
+                            <span>30%</span>
+                            <span>40%</span>
+                            <span>50%</span>
+                            <span>60%</span>
+                            <span>70%</span>
+                            <span>80%</span>
+                            <span>90%</span>
                         </div>
                     </div>
                     <div class="space-y-4 sm:space-y-6">
@@ -266,12 +274,9 @@
                             <p class="min-w-0 break-words hyphens-auto">Взнос</p>
                             <p id="initialPaymentAmount" class="min-w-0 break-words hyphens-auto">700 000 ₽</p>
                         </div>
-                        <div class="flex justify-between text-sm sm:text-[18px] text-[#000F6E] font-medium">
-                            <p class="min-w-0 break-words hyphens-auto">Ежемесячный платёж</p>
-                            <p id="monthlyPayment" class="min-w-0 break-words hyphens-auto">72 000 ₽</p>
-                        </div>
                     </div>
                 </div>
+
 
                 <div>
                     <h3
@@ -616,5 +621,6 @@
 <script src="../script/modules/car/changeColor.js" type="module"></script>
 <script src="../script/utils/validation.js"></script>
 <script src="../script/components/modals/showPhotoModal.js"></script>
+<script src="../script/components/slider/range/leasingRange.js"></script>
 
 </html>

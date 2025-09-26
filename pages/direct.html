@@ -13,7 +13,7 @@
     <!-- Подключаем Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/slider.css">
+    <link rel="stylesheet" href="../style/commonslider.css">
     <link rel="stylesheet" href="../style/checkbox.css">
 
     <script>
@@ -267,11 +267,20 @@
                         3. Первоначальный взнос
                     </h3>
                     <div class="mb-6 sm:mb-8">
-                        <input type="range" id="initialPaymentSlider" min="10" max="70" step="7" value="20"
+                        <input type="range" id="initialPaymentSlider" min="0" max="90" step="10" value="20"
                             class="w-full h-2 sm:h-4 bg-gray-300 rounded-xl appearance-none cursor-pointer slider" />
                         <div
-                            class="flex justify-between mt-4 sm:mt-6 text-xs sm:text-[16px] text-[#000F6E] font-medium flex-wrap gap-y-2">
-                            <span>10%</span><span>20%</span><span>30%</span><span>40%</span><span>50%</span><span>60%</span><span>70%</span><span>80%</span><span>90%</span>
+                            class="flex justify-between mt-4 sm:mt-6 text-xs sm:text-[16px] text-[#000F6E] font-medium">
+                            <span>0%</span>
+                            <span>10%</span>
+                            <span>20%</span>
+                            <span>30%</span>
+                            <span>40%</span>
+                            <span>50%</span>
+                            <span>60%</span>
+                            <span>70%</span>
+                            <span>80%</span>
+                            <span>90%</span>
                         </div>
                     </div>
                     <div class="space-y-4 sm:space-y-6">
@@ -616,31 +625,13 @@
         }
     </style>
 </body>
-<style>
-    .slider::-webkit-slider-thumb {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #1e40af;
-        cursor: pointer;
-        border: 2px solid white;
-    }
 
-    .slider::-moz-range-thumb {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #1e40af;
-        cursor: pointer;
-        border: 2px solid white;
-    }
-</style>
 <script src="https://unpkg.com/imask@7.0.0/dist/imask.min.js"></script>
 <script src="../script/modules/iterations/cars.js"></script>
 <script src="../script/modules/car/showCar.js"></script>
 <script src="../script/modules/car/changeColor.js" type="module"></script>
 <script src="../script/utils/validation.js"></script>
 <script src="../script/components/modals/showPhotoModal.js"></script>
+<script src="../script/components/slider/range/loanRange.js"></script>
 
 </html>

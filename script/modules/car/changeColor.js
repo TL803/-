@@ -69,6 +69,7 @@ function initColorPicker(containerElement, imageElement) {
 
     colors.forEach(colorObj => {
         const colorButton = Dom.createElement('button', buttonClass);
+        colorButton.setAttribute('type', 'button')
         colorButton.style.backgroundColor = colorObj.color;
 
         colorButton.addEventListener('click', () => {

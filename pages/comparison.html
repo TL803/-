@@ -74,120 +74,120 @@
 <main class="container mx-auto px-4 md:px-[40px] py-12">
   <!-- Кнопка "Вернуться назад" -->
   <div class="mb-6">
-    <a href="#" class="inline-block bg-[#56E0EA] text-[#000F6E] font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#4bd8e3] transition-colors">
-      Вернуться назад
+    <a href="#" class="inline-flex items-center gap-2 bg-white text-textDark font-medium py-2 px-4 rounded-full shadow-sm hover:shadow-md transition-all">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Вернуться назад
     </a>
   </div>
 
   <!-- Заголовок -->
-  <h1 class="text-3xl md:text-4xl font-bold text-white mb-6">Сравнение комплектаций</h1>
+  <h1 class="text-3xl md:text-4xl font-bold text-textDark mb-6">Сравнение комплектаций</h1>
 
   <!-- Таблица сравнения -->
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+  <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
     <!-- Заголовки столбцов -->
-    <div class="grid grid-cols-3 bg-[#152F65] text-white font-semibold p-4">
+    <div class="grid grid-cols-3 bg-lightBg text-textDark font-semibold p-4 border-b border-gray-200">
       <div class="col-span-1">Опции</div>
       <div class="col-span-1 text-center">Family DCT (FWD DCT)</div>
       <div class="col-span-1 text-center">Family MT (FWD MT)</div>
     </div>
 
     <!-- Экстерьер -->
-    <div class="bg-[#152F65] text-[#56E0EA] font-medium p-3">ЭКСТЕРЬЕР</div>
-    <div class="border-t border-gray-200">
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">17" легкосплавные диски с шинами 225/65</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+    <div class="bg-lightBg text-primary font-medium p-3 border-b border-gray-100">ЭКСТЕРЬЕР</div>
+    <div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">17" легкосплавные диски с шинами 225/65</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Светодиодные фары</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Светодиодные фары</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Светодиодные дневные ходовые огни</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Светодиодные дневные ходовые огни</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Галогеновые задние фонари</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Галогеновые задние фонари</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Светодиодные противотуманные фары</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Светодиодные противотуманные фары</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Задержка света фар после закрытия центрального замка (follow-me-home)</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Задержка света фар после закрытия центрального замка (follow-me-home)</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Неокрашенный пластик переднего и заднего бампера, юбка по бокам кузова</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Неокрашенный пластик переднего и заднего бампера, юбка по бокам кузова</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Окрашенные в цвет кузова колпаки зеркал заднего вида, ручки дверей с хромированными вставками</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Окрашенные в цвет кузова колпаки зеркал заднего вида, ручки дверей с хромированными вставками</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Хромированная окантовка окон дверей, антикоррозийный хром</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Хромированная окантовка окон дверей, антикоррозийный хром</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Окрашенная решетка радиатора</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Окрашенная решетка радиатора</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Рейлинги на крыше</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Рейлинги на крыше</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
     </div>
 
     <!-- Мультимедиа и технологии -->
-    <div class="bg-[#152F65] text-[#56E0EA] font-medium p-3">МУЛЬТИМЕДИА И ТЕХНОЛОГИИ</div>
-    <div class="border-t border-gray-200">
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Антенна "акулий плавник"</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+    <div class="bg-lightBg text-primary font-medium p-3 border-b border-gray-100">МУЛЬТИМЕДИА И ТЕХНОЛОГИИ</div>
+    <div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Антенна "акулий плавник"</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">4 динамика</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">4 динамика</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
     </div>
 
     <!-- Интерьер -->
-    <div class="bg-[#152F65] text-[#56E0EA] font-medium p-3">ИНТЕРЬЕР</div>
-    <div class="border-t border-gray-200">
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Тканевая обивка сидений</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+    <div class="bg-lightBg text-primary font-medium p-3 border-b border-gray-100">ИНТЕРЬЕР</div>
+    <div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Тканевая обивка сидений</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Макияжное зеркало в солнцезащитном козырьке пассажира</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Макияжное зеркало в солнцезащитном козырьке пассажира</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
-      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-gray-50">
-        <div class="col-span-1 text-[#01101B]">Кожаный руль</div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
-        <div class="col-span-1 text-center"><span class="text-[#56E0EA] font-bold">+</span></div>
+      <div class="grid grid-cols-3 items-center p-3 border-b border-gray-100 hover:bg-lightBg transition-colors">
+        <div class="col-span-1 text-textDark">Кожаный руль</div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
+        <div class="col-span-1 text-center"><span class="text-secondary font-bold text-lg">+</span></div>
       </div>
     </div>
-
-    <!-- Добавьте больше категорий по необходимости -->
-
   </div>
 </main>
 
